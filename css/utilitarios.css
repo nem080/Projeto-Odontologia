@@ -1,0 +1,34 @@
+
+.cortext {
+    color: #0056b3;
+}
+.botao-geral {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-geral:hover {
+    background-color: #0056b3;
+}
+
+
+/* responsividade botao */
+@media (max-width: 780px) {
+    .botao-geral {
+        padding: 8px 20px;
+        font-size: 15px;
+      
+    }
+}
+
+@media(max-width: 600px){
+    .botao-geral {
+        display: none;
+    }
+}
