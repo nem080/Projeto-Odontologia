@@ -21,6 +21,19 @@ a {
     padding: 10px;
     /* background-color: aqua; */
 }
+.titulo-p{
+    font-size: 36.8px;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+.titulo-s{
+    font-size: 28.8px;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
 
 img {
   display: block;

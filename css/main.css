@@ -1,18 +1,15 @@
 /* main */
+.bg-inicio{
+    margin-bottom:80px;
+}
 .corpo-inicio {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: .625rem;
+    gap: 1.625rem;
     margin: 0 .625rem;
 }
-.descri-inicio h1 {
-    font-size: 36.8px;
-    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    text-align: center;
-}
+
 .btns-inicio{
     display: flex;
     justify-content: center;
@@ -46,19 +43,24 @@
     margin: 0 0 1.25rem;
     color: #0b0b0b;
     text-align: start;
+    padding-bottom: -5px;
 }
 
 .descri-inicio {
     margin: 0 2.5rem 0 0;
     padding: 0rem 2.5rem;
 }
-
+.imagem-inicio{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
 .imagem-inicio img {
     border-radius: 1.25rem 0rem 0rem 1.25rem;
 }
 
 /* resposividade */
-@media(max-width:64rem){
+@media(max-width:1024px){
     .corpo-inicio{
         display: block;
         margin: 0 auto;
@@ -75,8 +77,26 @@
         border-radius: .625rem;
         padding-bottom: 5rem;
     }
+    .bg-inicio {
+        margin-bottom: 25px;
+    }
+
+    .imagem-inicio img {
+        padding-bottom: 3rem;
+    }
 }
 
+@media (max-width:769px){
+    .descri-inicio{
+        margin: 0;
+    }
+    .imagem-inicio img {
+            margin: 0 auto;
+            border-radius: .625rem;
+            padding-bottom: 0rem;
+        }
+
+}
 @media (max-width:606px){
     .descri-inicio h1{
         font-size: 25.6px;
@@ -94,7 +114,7 @@
     }
 
     .btns-inicio {
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
     }
 
     .btns-inicio .orc{
@@ -107,15 +127,23 @@
         padding: 8px 15px;
         font-size: 16px;
     }
+    .imagem-inicio img {
+        margin: 0 auto;
+        border-radius: 0.625rem;
+        width: 520px;
+    }
     
 }
 @media (max-width:414px){
+    .bg-header{
+        margin-bottom: 30px;
+    }
     .descri-inicio {
         margin: 0;
         padding: 0rem 2.5rem;
     }
     .descri-inicio h1 {
-        font-size: 20.6px;
+        font-size: 22.6px;
         font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
         font-weight: 300;
         margin-bottom: 2.5rem;
@@ -136,7 +164,7 @@
     .imagem-inicio img {
         margin: 0 auto;
         border-radius: 0.625rem;
-        padding-bottom: 5rem;
+        /* padding-bottom: 5rem; */
         width: 370px;
     }
         

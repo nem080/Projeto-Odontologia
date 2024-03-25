@@ -1,11 +1,9 @@
 .bg-header {
     background-color: #fff;
-    bottom: 50px;
+    margin-bottom: 80px;
 }
 
-.header-corpo.container {
-    margin-bottom: 100px;
-}
+
 
 .header-corpo {
     display: flex;
@@ -142,7 +140,7 @@
         font-size: 26px;
         margin: 0 25px;
         align-items: center;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
     }
 
     .menu-mobile a {

@@ -1,0 +1,153 @@
+.bg-sobre{
+    background-color: #fff;
+    margin-bottom: 70px;
+}
+
+.corpo-sobre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 30px; */
+    align-items: center;
+    margin: 20px 0;
+}
+
+.img-sobre img{
+    margin:0 auto;
+    border-radius: 50%;
+    padding: 40px 0;
+}
+.descri-sobre.titulo-s{
+    font-size: 25px;
+}
+.descri-sobre p{
+    font-size: 1.1175rem;
+    line-height: 24px;
+    margin: 0 0 1.25rem;
+    color: #0b0b0b;
+    text-align: start;
+    padding-bottom: -5px;
+}
+.descri-sobre .botao-geral{
+    color: #fff;
+    margin:20px 0;
+    display: inline-block;
+
+}
+.descri-sobre ul{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 40px 0 0;
+}
+.descri-sobre li{
+    display: flex;
+    padding:10px;
+    font-size: 18px;
+    
+}
+.descri-sobre a i{
+    font-size:35px;
+    color: #0056b3;
+}
+
+.descri-sobre a i:hover{
+    transform: scale(1.2);
+    color: #62acf1;
+    transition: 0.5s;
+}
+
+/* responsividade */
+
+@media(max-width:1024px) {
+    .descri-sobre p {
+        font-size: 1.1175rem;
+        line-height: 24px;
+        margin: 0 0 1.25rem;
+
+    }
+    .descri-sobre .botao-geral {
+        color: #fff;
+        margin: 0 0 20px;
+        display: inline-block;
+
+    }
+    .descri-sobre .titulo-s{
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:769px) {
+    .bg-sobre.container{
+        width: 100%;
+        margin:0 auto;
+    }
+    .bg-sobre {
+
+        margin-bottom: 40px;
+    }
+    .corpo-sobre {
+        grid-template-columns: 1fr;
+        
+    }
+    .descri-sobre{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .img-sobre img {
+    width: 300px;
+    height: 400px;
+    padding: 10px 0;
+    border-radius: 40px;  
+    object-fit: cover;
+    /* Mantém a proporção da imagem e corta para caber */
+    }
+    .descri-sobre .titulo-s{
+        text-align: center; 
+        margin: 0 30px 20px;
+    }
+    .descri-sobre p{
+        max-width: 600px;
+        text-align: center;
+        margin: 0 30px 30px;
+
+    }
+    .descri-sobre .botao-geral{
+        display: inline-block;
+        /* Garante que o botão respeite a largura especificada */
+        width: 40%;
+        margin: 0 auto;
+        
+    }
+    .descri-sobre ul {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+}
+@media (max-width:606px) {
+    .img-sobre img{
+        margin: 0 auto;
+        border-radius: 0.625rem;
+        width: 300px;
+    }
+
+    .descri-sobre p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:414px) {
+    .img-sobre img {
+        margin: 0 auto;
+        border-radius: 0.625rem;
+        width: 300px;
+        }
+    
+    .descri-sobre p {
+        font-size: 16px;
+    }
+
+}
