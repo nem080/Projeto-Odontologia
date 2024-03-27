@@ -3,6 +3,7 @@
 // });
 
 import { initMenuMobile } from './module/menu-mobile.js';
-
+import {initBtnVerMais} from './module/btn-verMais.js'
 
 initMenuMobile();
+initBtnVerMais();
