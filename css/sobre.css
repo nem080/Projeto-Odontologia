@@ -59,6 +59,10 @@
 /* responsividade */
 
 @media(max-width:1024px) {
+    .bg-sobre {
+        background-color: #fff;
+        margin-bottom: 40px;
+    }
     .descri-sobre p {
         font-size: 1.1175rem;
         line-height: 24px;
@@ -103,7 +107,7 @@
     }
     .descri-sobre .titulo-s{
         text-align: center; 
-        margin: 0 30px 20px;
+        margin: 20px;
     }
     .descri-sobre p{
         max-width: 600px;
@@ -136,6 +140,7 @@
 
     .descri-sobre p{
         font-size: 16px;
+        margin: 0 70px 30px;
     }
 }
 

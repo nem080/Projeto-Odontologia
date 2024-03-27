@@ -100,6 +100,9 @@
 }
 
 @media (max-width: 898px) {
+    .bg-header {
+        margin-bottom: 40px
+    }
     .corpo-nav ul {
         display: flex;
         gap: 20px;
@@ -118,6 +121,12 @@
 
     .logo {
         width: 18%;
+    }
+}
+
+@media (max-width:600px){
+    .bg-header{
+        margin-bottom: 40px
     }
 }
 
