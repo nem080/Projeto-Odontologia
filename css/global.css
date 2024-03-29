@@ -9,12 +9,11 @@ body {
     background-color: #FBFBFB;
 }
 
-ul,
-li,
-a {
+ul, li, a {
     text-decoration: none;
     list-style: none;
 }
+
 
 .container {
     margin: 0 50px;

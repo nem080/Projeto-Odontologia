@@ -1,7 +1,8 @@
 .bg-servicos{
     margin-bottom: 80px;
 }
-.bg-servicos h2{
+.bg-servicos .titulo-s{
+
     color: #0056b3;
     padding: 0 50px 20px;
 }
@@ -67,6 +68,9 @@
 }
 
 @media (max-width:600px){
+    .bg-servicos {
+            margin-bottom: 40px;
+        }
     .corpo-servico {
         grid-template-columns:1fr;
     }

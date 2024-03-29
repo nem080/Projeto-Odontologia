@@ -17,13 +17,13 @@
     padding: 40px 0;
 }
 .descri-sobre.titulo-s{
-    font-size: 25px;
+    font-size: 30px;
 }
 .descri-sobre p{
-    font-size: 1.1175rem;
+    font-size: 1.0625rem;
     line-height: 24px;
-    margin: 0 0 1.25rem;
-    color: #0b0b0b;
+    /* margin: 0 0 1.25rem; */
+    color: #686868;
     text-align: start;
     padding-bottom: -5px;
 }
@@ -140,7 +140,7 @@
 
     .descri-sobre p{
         font-size: 16px;
-        margin: 0 70px 30px;
+        margin: 0 60px 30px;
     }
 }
 

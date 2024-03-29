@@ -41,7 +41,7 @@
     font-size: 1.1875rem;
     line-height: 24px;
     margin: 0 0 1.25rem;
-    color: #0b0b0b;
+    color: #686868;
     text-align: start;
     padding-bottom: -5px;
 }
@@ -97,7 +97,7 @@
         }
 
 }
-@media (max-width:606px){
+@media (max-width:600px){
     .descri-inicio h1{
         font-size: 25.6px;
         font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
@@ -110,9 +110,11 @@
 
     }
     .descricao-main{
-        width: 25rem;
+       width: 100%;
     }
-
+    .descricao-main p{
+        margin: 20px 20px 30px;
+    }
     .btns-inicio {
         margin-bottom: 1.5rem;
     }

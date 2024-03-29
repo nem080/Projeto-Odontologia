@@ -7,3 +7,5 @@ import {initBtnVerMais} from './module/btn-verMais.js'
 
 initMenuMobile();
 initBtnVerMais();
+
+
