@@ -6,7 +6,7 @@
 .corpo-sobre{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* gap: 30px; */
+    gap: 10px;
     align-items: center;
     margin: 20px 0;
 }
@@ -20,9 +20,9 @@
     font-size: 30px;
 }
 .descri-sobre p{
-    font-size: 1.0625rem;
+    letter-spacing:0.8px;
     line-height: 24px;
-    /* margin: 0 0 1.25rem; */
+    padding: 0 15px 0 0;
     color: #686868;
     text-align: start;
     padding-bottom: -5px;
@@ -46,7 +46,7 @@
     
 }
 .descri-sobre a i{
-    font-size:35px;
+    font-size:2.1875rem;
     color: #0056b3;
 }
 
@@ -64,7 +64,6 @@
         margin-bottom: 40px;
     }
     .descri-sobre p {
-        font-size: 1.1175rem;
         line-height: 24px;
         margin: 0 0 1.25rem;
 
@@ -80,6 +79,33 @@
     }
 }
 
+@media (max-width:884px) {
+    .corpo-sobre {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        align-items: center;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .corpo-sobre p{
+        text-align: center;
+    }
+    .img-sobre img {
+        width: 500px;
+        height: 400px;
+        padding: 10px 0;
+        border-radius: 40px;
+        object-fit: cover;
+        /* Mantém a proporção da imagem e corta para caber */
+    }
+    .descri-sobre p {
+        text-align: center;
+        margin: 0 40px 30px;
+
+    }
+    
+}
 @media (max-width:769px) {
     .bg-sobre.container{
         width: 100%;
@@ -110,10 +136,9 @@
         margin: 20px;
     }
     .descri-sobre p{
-        max-width: 600px;
+        max-width: 650px;
         text-align: center;
         margin: 0 30px 30px;
-
     }
     .descri-sobre .botao-geral{
         display: inline-block;
@@ -139,7 +164,7 @@
     }
 
     .descri-sobre p{
-        font-size: 16px;
+        /* font-size: 16px; */
         margin: 0 60px 30px;
     }
 }
@@ -151,8 +176,8 @@
         width: 300px;
         }
     
-    .descri-sobre p {
+    /* .descri-sobre p {
         font-size: 16px;
-    }
+    } */
 
 }

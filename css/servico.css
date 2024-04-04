@@ -25,12 +25,13 @@
 }
 
 .card-servico p{
-    font-size: 17px;
     line-height:1.4;
     color: #323232;
+    max-width: 341.22px;
+    margin: 0 auto;
 }
 .card-servico{
-    margin: 0 30px 30px;
+    margin: 0 15px 30px;
 }
 
 .centralizar{
@@ -44,6 +45,26 @@
 @media (max-width: 1024px){
     .bg-servicos h2 {
         text-align: center;
+    }
+}
+@media (max-width:884px) {
+    .corpo-servico {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .spand {
+        grid-column: 1/-1;
+
+    }
+    .bg-servicos h2 {
+        margin: 10px 0 40px;
+    }
+
+    .card-servico p {
+        line-height: 1.2;
+        color: #323232;
+        /* margin: 0 40px; */
+        margin: 0 auto;
+        max-width: 300px;
     }
 }
 
@@ -60,10 +81,9 @@
         margin:10px 0 40px;
     }
     .card-servico p {
-        font-size: 16px;
         line-height: 1.2;
         color: #323232;
-        margin:0 20px;
+        margin:0 auto;
     }
 }
 
@@ -92,8 +112,7 @@
         grid-template-columns:1fr;
     }
     .bg-servicos h2 {
-        font-size: 24.4px;
-        margin: 10px 0 40px;
+        margin: 10px 0 20px;
         font-weight: 700;
     }
 }

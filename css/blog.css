@@ -1,11 +1,10 @@
 .bg-blog{
     background-color: #fff;
 }
-.bg-blog h2{
-    font-size:25px;
+.bg-blog .titulo-s{
     color:#333;
     line-height: 1.5rem;
-    margin: 20px 10px 40px;
+    margin: 30px 10px 40px;
     padding: 0;
     display: block;
 }
@@ -26,11 +25,15 @@
     margin:0 auto;
 }
 .text-descr-blog p{
-    font-size: 18px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     color: #686868;
     line-height: 1.5em;
     font-style: italic;
+    margin: 0 40px 40px;
+}
+.text-descr-blog p:last-child {
+    margin-bottom: 20px;
+    /* Substitua 20px pela margem desejada */
 }
 .text-descr-blog a{
     font-size: 1.2em;
@@ -47,20 +50,27 @@
 }
 
 
+.text-descr-blog .botao-geral{
+    display: none;
+}
+
+
+
 /* responsividade */
-@media (max-width:768px){
-    .bg-blog h2{
-        font-size:20px;
+@media (max-width:1280px){
+    .text-descr-blog{
+        max-width: 100%;
     }
+}
+
+@media (max-width:768px){
+
     .corpo-blog .text-descr-blog{
         width: 600px;
     }
 }
 
 @media (max-width:601px){
-    .bg-blog h2 {
-        font-size: 20px;
-    }
     .corpo-blog .titulo-s{
         margin:20px 5px 20px;
     }
@@ -70,27 +80,33 @@
     }
     .text-descr-blog p{
         text-align: center;
+        margin-bottom: 20px;
     }
     #data-plubli{
         font-size:16px;
     }
+    .ocultar{
+        display: none;
+    }
+    .text-descr-blog .ativo{
+        align-items: center;
+    }
+    .text-descr-blog a::after{
+        margin-bottom:40px;
+    }
+   
+    .text-descr-blog .botao-geral {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width:414px) {
-    .bg-blog h2 {
-        font-size: 20px;
-    }
-
     .corpo-blog .text-descr-blog {
         width: 250px;
     }
-
-    .text-descr-blog p {
-        font-size: 18px;
-    }
-    
-
     #data-plubli {
-        font-size: 13px;
+        margin: 0px;
+        font-size: 12px;
     }
 }

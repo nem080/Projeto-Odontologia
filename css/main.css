@@ -38,7 +38,6 @@
 }
 
 .descricao-main p {
-    font-size: 1.1875rem;
     line-height: 24px;
     margin: 0 0 1.25rem;
     color: #686868;
@@ -89,17 +88,18 @@
 @media (max-width:769px){
     .descri-inicio{
         margin: 0;
+        flex-direction: row;
     }
     .imagem-inicio img {
             margin: 0 auto;
             border-radius: .625rem;
-            padding-bottom: 0rem;
+            padding-bottom: 0.5rem;
         }
 
 }
 @media (max-width:600px){
     .descri-inicio h1{
-        font-size: 25.6px;
+        /* font-size: 25.6px; */
         font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
         font-weight: 400;
         margin-bottom: 2.5rem;

@@ -13,7 +13,18 @@ ul, li, a {
     text-decoration: none;
     list-style: none;
 }
-
+h1{
+    font-size:2.5rem;
+}
+h2{
+    font-size:2rem;
+}
+h3{
+    font-size:1.5rem;
+}
+p{
+    font-size:1.1rem;
+}
 
 .container {
     margin: 0 50px;
@@ -21,14 +32,14 @@ ul, li, a {
     /* background-color: aqua; */
 }
 .titulo-p{
-    font-size: 36.8px;
+    font-size: 2.5rem;
     font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
     font-weight: 700;
     margin-bottom: 2.5rem;
     text-align: center;
 }
 .titulo-s{
-    font-size: 28.8px;
+    font-size: 2rem;
     font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
     font-weight: 700;
     margin-bottom: 2.5rem;
@@ -39,3 +50,78 @@ img {
   /* max-width: 100%; */
 }
 
+
+/* Mídia queries para diferentes larguras de tela */
+@media(max-width: 1024px) {
+    .titulo-p {
+            font-size: 2rem;
+        }
+    
+        .titulo-s {
+            font-size:1.75rem;
+        }
+
+    .titulo-pequeno {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .titulo-p {
+            font-size: 1.5rem;
+        }
+    
+    .titulo-s {
+        font-size: 1.25rem;
+    }
+
+    .titulo-pequeno {
+        font-size: 1rem;
+    }
+
+    .paragrafo {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo-p {
+        font-size: 1.25rem;
+    }
+
+    .titulo-s {
+        font-size: 1rem;
+    }
+
+    .titulo-pequeno {
+        font-size: 0.875rem;
+    }
+
+    .paragrafo {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 414px) {
+    .titulo-p {
+        font-size: 1rem;
+    }
+
+    .titulo-s {
+        font-size: 1rem;
+    }
+
+    .titulo-pequeno {
+        font-size: 0.75rem;
+    }
+
+    .paragrafo {
+        font-size: 0.625rem;
+        text-align: justify;
+
+    }
+}

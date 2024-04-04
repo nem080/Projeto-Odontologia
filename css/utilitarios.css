@@ -17,7 +17,6 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    
     display: inline-block;
 }
 
@@ -45,5 +44,13 @@
 @media(max-width: 600px){
     .botao-geral {
         display: none;
+    }
+}
+@media (max-width: 428px){
+    .botao-geral {
+        padding: 5px 30px;
+        font-size: 13px;
+        text-align: center;
+        line-height: 1.2;
     }
 }
