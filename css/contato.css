@@ -1,0 +1,23 @@
+.bg-contato{
+    height: 900px;
+    background: #dcdcdc;;
+}
+
+.corpo-contato{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    margin:0 60px;
+}
+label:first-child{
+    margin-top: 20px;
+}
+label{
+    display: block;
+    /* margin-bottom: 5px; */
+}
+input{
+        /* display: block; */
+        margin-bottom: 10px;
+}
