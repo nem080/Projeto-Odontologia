@@ -19,7 +19,7 @@
 .descri-sobre.titulo-s{
     font-size: 30px;
 }
-.descri-sobre p{
+.descri-sobre .paragrafo{
     letter-spacing:0.8px;
     line-height: 24px;
     padding: 0 15px 0 0;
@@ -88,7 +88,7 @@
         margin: 20px 0;
         text-align: center;
     }
-    .corpo-sobre p{
+    .corpo-sobre .paragrafo {
         text-align: center;
     }
     .img-sobre img {
@@ -99,7 +99,7 @@
         object-fit: cover;
         /* Mantém a proporção da imagem e corta para caber */
     }
-    .descri-sobre p {
+    .descri-sobre .paragrafo {
         text-align: center;
         margin: 0 40px 30px;
 
@@ -135,7 +135,7 @@
         text-align: center; 
         margin: 20px;
     }
-    .descri-sobre p{
+    .descri-sobre .paragrafo{
         max-width: 650px;
         text-align: center;
         margin: 0 30px 30px;
@@ -163,7 +163,7 @@
         width: 300px;
     }
 
-    .descri-sobre p{
+    .descri-sobre .paragrafo {
         /* font-size: 16px; */
         margin: 0 60px 30px;
     }
