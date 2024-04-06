@@ -302,6 +302,38 @@
             <p id="data-plubli">Data de Publicação: <time datetime="2024-03-26">26 de Março de 2024</time></p>
         </article>
     </section>
+    
+    <section>
+        <div class="bg-contato">
+            <h2 class="titulo-s ">Fale conosco!</h2>
+            <div class="corpo-contato ">
+                <div class="descricao-contato">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magni neque vel
+                        rerum qui aperiam labore atque vitae ratione consequuntur dolor optio dolorem temporibus consectetur
+                        delectus voluptates nemo fuga?
+                    </p>
+                </div>
+                <div class="bg-from">
+                    <form action="#" method="post">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="123-456-7890">
+
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea>
+                    
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <script type="module" src="../js/script.js"></script>
