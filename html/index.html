@@ -254,7 +254,7 @@
         </div>
     </section>
     <section class="bg-blog container space-bottom" id="blog">
-        <h2><span class="cortext">Artigo!</span></h2>
+        <h2 class="titulo-s"><span class="cortext">Artigo!</span></h2>
         <article class="corpo-blog">
             <h2 class="titulo-s">Cuidado com os dentes é fundamental</h2>
             <div class="img-blog">
@@ -303,8 +303,7 @@
         </article>
     </section>
     
-    <section>
-        <div class="bg-contato">
+        <section class="bg-contato space-bottom" id="contato">
             <h2 class="titulo-s ">Fale conosco!</h2>
             <div class="corpo-contato ">
                 <div class="descricao-contato">
@@ -316,24 +315,23 @@
                 </div>
                 <div class="bg-from">
                     <form action="#" method="post">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required>
+                        <label class="spandegrid-4" for="nome">Nome:</label>
+                        <input class="spandegrid-4" type="text" id="nome" name="nome" required>
                     
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <label class="spandegrid-4" for="email">Email:</label>
+                        <input class="spandegrid-4" type="email" id="email" name="email" required>
                     
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="123-456-7890">
+                        <label class="spandegrid-3" for="telefone">Telefone:</label>
+                        <input class="spandegrid-3" type="tel" id="telefone" name="telefone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="(DDD) 9 9999-9999">
 
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea>
+                        <label class="spandegrid-3" for="mensagem">Mensagem:</label>
+                        <textarea class="spandegrid-3" id="mensagem" name="mensagem" rows="4" cols="50" required></textarea>
                     
-                        <input type="submit" value="Enviar">
+                        <button class="spandegrid-4 botao-geral" type="submit" value="Enviar">Enviar</button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
     <script type="module" src="../js/script.js"></script>
