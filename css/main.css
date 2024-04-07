@@ -37,7 +37,7 @@
     width: 39.375rem;
 }
 
-.descricao-main p {
+.descricao-main .paragrafo{
     line-height: 24px;
     margin: 0 0 1.25rem;
     color: #686868;
