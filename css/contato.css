@@ -1,58 +1,157 @@
-.bg-contato{
+.bg-contato {
     background: #007bff;
     padding: 20px;
-    height: 900px;
+    height: 1900px;
 }
 
-.bg-contato .titulo-s{
-    color:#fff;
+.bg-contato .titulo-s {
+    color: #fff;
     margin: 30px 30px 40px;
 }
-.corpo-contato{
+
+.corpo-contato {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 40px;
+    gap: 80px;
     justify-content: space-between;
-    margin:0 60px;
 }
-.bg-from form{
+
+.bg-from{
+    display: flex;
+    flex-direction: column;
+    background-color: #0173eca8;
+    max-width: 600px;
+    /* padding: 50px; */
+}
+/* centralizar form na div  */
+.bg-from form {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 30px;
+    grid-template-columns: repeat(8, 1fr);
+    padding:0 0 30px;
+    margin:10px 40px 5px;
+    justify-content: center;
+    /* margin: 0 auto;  */
+    align-items: center;
+    align-self: center;
+    max-width: 100%;
 }
-.spandegrid-4{
-    grid-column: 1/ 4;
+
+
+
+.spandegrid-4 {
+    grid-column: 2/8;
 }
-.spandegrid-3{
-    grid-column: 1/ 3;
+
+.spandegrid-3 {
+    grid-column: 2/7;
 }
-.spandegrid-2{
-    grid-column: 1/ 2;
+
+.spandegrid-2 {
+    grid-column: 2/5;
 }
-label:first-child{
+
+label:first-child {
     margin-top: 20px;
-    
 }
-label{
+
+label {
     color: #fff;
     display: block;
     font-weight: 700;
     font-size: 1.2rem;
-    /* margin-bottom: 5px; */
+    margin: 10px 0 0px 10px;
 }
-input{
+input:focus, textarea:focus{
+    outline: none;
+}
+
+input {
     display: block;
     margin-bottom: 10px;
-    height:  40px;
+    height: 40px;
     width: 100%;
-    border-radius: 10px;
     border: 1px solid #fff;
-}
-input::placeholder{
-    padding:0 10px;
+    padding-left: 10px;
+    border-radius: 5px;
 }
 
-.bg-from .botao-geral{
+input::placeholder {
+    padding: 0 5px;
+    color: #6d6d6d9b;
+}
+textarea{
+    padding:5px 10px 0  ; 
+    border-radius: 5px;
+    min-height: 90px;
+    resize: vertical;
+}
 
+.bg-from .botao-geral {
+    background-color: rgb(244, 239, 239);
+    border: .0625rem solid #013464;
+    box-shadow: 0rem .0625rem .3125rem 0rem #002ca4;
+    color: #414040;
+    padding: .625rem 1.875rem;
+    z-index: 200;
+    margin-top: 20px;
+}
+/* centralizar btn na div  */
+.bg-from .botao-geral:hover{
+    background-color: #024792;
+    color: white;
+    box-shadow: .0625rem .0625rem .3125rem #002ca4;
+    transition: 1s;
+}
+
+
+/*  STYLE TELA DE ENVIO CONFIRMAÇÃO */
+.containere-envio {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 90px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0173ec;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #0173ec;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #015aa5;
+}
+/* FIM DO STYLO ENVIO */
+
+/* STYLO LOADING */
+
+#btn-from-contato img {
+    margin: 0 auto;
+    width: 30px;
+    animation: spin 1s infinite  linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

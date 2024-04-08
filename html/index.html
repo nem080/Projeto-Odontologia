@@ -307,32 +307,33 @@
             <h2 class="titulo-s ">Fale conosco!</h2>
             <div class="corpo-contato ">
                 <div class="descricao-contato">
-                    <p>
+                    <p class="paragrafo">
+                        Envie um email dire
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium, magni neque vel
                         rerum qui aperiam labore atque vitae ratione consequuntur dolor optio dolorem temporibus consectetur
                         delectus voluptates nemo fuga?
                     </p>
                 </div>
                 <div class="bg-from">
-                    <form action="#" method="post">
-                        <label class="spandegrid-4" for="nome">Nome:</label>
+                    <form id="form-contato">
+                        <label class="spandegrid-4" for="nome">Nome:*</label>
                         <input class="spandegrid-4" type="text" id="nome" name="nome" required>
                     
-                        <label class="spandegrid-4" for="email">Email:</label>
-                        <input class="spandegrid-4" type="email" id="email" name="email" required>
+                        <label class="spandegrid-4" for="email">Email:*</label>
+                        <input class="spandegrid-4" type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
                     
-                        <label class="spandegrid-3" for="telefone">Telefone:</label>
-                        <input class="spandegrid-3" type="tel" id="telefone" name="telefone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="(DDD) 9 9999-9999">
+                        <label class="spandegrid-3" for="telefone">Telefone:*</label>
+                        <input class="spandegrid-3" type="tel" id="telefone" name="telefone"  required placeholder="(DDD) 9 9999-9999">
 
-                        <label class="spandegrid-3" for="mensagem">Mensagem:</label>
-                        <textarea class="spandegrid-3" id="mensagem" name="mensagem" rows="4" cols="50" required></textarea>
-                    
-                        <button class="spandegrid-4 botao-geral" type="submit" value="Enviar">Enviar</button>
+                        <label class="spandegrid-4" for="mensagem">Mensagem:*</label>
+                        <textarea class="spandegrid-4" id="mensagem" name="mensagem" rows="4" cols="50" maxlength="200"required></textarea>
+                        <button id="btn-from-contato" class="spandegrid-4 botao-geral" type="submit" value="Enviar"> enviar
+                            <!-- <img src="../img/loadAzul.png" alt="loading"> -->
+                        </button>
                     </form>
                 </div>
             </div>
         </section>
-
 
     <script type="module" src="../js/script.js"></script>
 </body>
