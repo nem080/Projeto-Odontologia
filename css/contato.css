@@ -104,7 +104,9 @@ textarea{
     transition: 1s;
 }
 
-
+/* .respostaFrom{
+    display: ;
+} */
 /*  STYLE TELA DE ENVIO CONFIRMAÇÃO */
 .containere-envio {
     max-width: 600px;

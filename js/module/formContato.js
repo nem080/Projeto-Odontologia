@@ -5,10 +5,13 @@ export function initFormContato() {
 
 const corpoForm = document.querySelector('#form-contato');
 const btnEnviar = document.querySelector('#btn-from-contato'); // Selecionar o elemento do botão, não o valor
-console.log(btnEnviar);
+// console.log(btnEnviar);
 
 function addLoading() {
     btnEnviar.innerHTML = '<img src="../img/loadAzul.png">';
+}
+function removeLoading() {
+    btnEnviar.innerHTML = 'Enviar';
 }
 
 function handleSubmit(event) {
@@ -31,6 +34,13 @@ function handleSubmit(event) {
             MENSAGEM: msg,
             TELEFONE: telefone
         })
+    }).then(() => {
+        removeLoading();
+        // Limpar os campos após o envio
+        document.querySelector('input[name="nome"]').value = '';
+        document.querySelector('input[name="email"]').value = '';
+        document.querySelector('input[name="telefone"]').value = '';
+        document.querySelector('textarea[name="mensagem"]').value = '';
     });
     console.log(name, email, telefone, msg);
 }
