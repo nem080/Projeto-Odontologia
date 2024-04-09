@@ -11,10 +11,11 @@
 
 .corpo-contato {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:repeat(2, 1fr);
     align-items: center;
     gap: 80px;
     justify-content: space-between;
+
 }
 
 .bg-from{
@@ -104,40 +105,20 @@ textarea{
     transition: 1s;
 }
 
-/* .respostaFrom{
-    display: ;
-} */
-/*  STYLE TELA DE ENVIO CONFIRMAÇÃO */
-.containere-envio {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 90px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    color: #0173ec;
-}
-
-p {
-    margin-bottom: 20px;
-}
-
-.btn {
-    background-color: #0173ec;
+.resposta-from{
+    font-size: 1.6rem;
     color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+    text-align: center;
+    background-color: rgb(47, 189, 255);
+    width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #ffffff;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    display: none;
 }
 
-.btn:hover {
-    background-color: #015aa5;
-}
 /* FIM DO STYLO ENVIO */
 
 /* STYLO LOADING */
