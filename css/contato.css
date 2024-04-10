@@ -1,7 +1,8 @@
 .bg-contato {
     background: #007bff;
     padding: 20px;
-    height: 1900px;
+    position: relative;
+    /* Alterado para relativo */
 }
 
 .bg-contato .titulo-s {
@@ -11,19 +12,32 @@
 
 .corpo-contato {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:repeat(2, 1fr);
     align-items: center;
     gap: 80px;
     justify-content: space-between;
+
+}
+.no-opacit{
+    opacity: 1
+}
+.opacit{
+    opacity: 0.2;
 }
 
-.bg-from{
+.bg-from {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #0173eca8;
     max-width: 600px;
-    /* padding: 50px; */
+    height: auto;
+    /* Defina a altura como auto para se ajustar ao conteúdo */
+    padding: 20px;
+    /* Adicione um pouco de padding para espaçamento */
 }
+
 /* centralizar form na div  */
 .bg-from form {
     display: grid;
@@ -104,40 +118,24 @@ textarea{
     transition: 1s;
 }
 
-/* .respostaFrom{
-    display: ;
-} */
-/*  STYLE TELA DE ENVIO CONFIRMAÇÃO */
-.containere-envio {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 90px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.resposta-from {
+    font-size: 1.6rem;
+    color: #020202;
+    text-align: center;
+    background-color: white;
+    width: 400px;
+    padding: 40px;
+    border: 1px solid #ffffff;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
 }
 
-h1 {
-    color: #0173ec;
-}
-
-p {
-    margin-bottom: 20px;
-}
-
-.btn {
-    background-color: #0173ec;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background-color: #015aa5;
-}
 /* FIM DO STYLO ENVIO */
 
 /* STYLO LOADING */
