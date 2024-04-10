@@ -1,7 +1,8 @@
 .bg-contato {
     background: #007bff;
     padding: 20px;
-    height: 1900px;
+    position: relative;
+    /* Alterado para relativo */
 }
 
 .bg-contato .titulo-s {
@@ -17,14 +18,26 @@
     justify-content: space-between;
 
 }
+.no-opacit{
+    opacity: 1
+}
+.opacit{
+    opacity: 0.2;
+}
 
-.bg-from{
+.bg-from {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #0173eca8;
     max-width: 600px;
-    /* padding: 50px; */
+    height: auto;
+    /* Defina a altura como auto para se ajustar ao conteúdo */
+    padding: 20px;
+    /* Adicione um pouco de padding para espaçamento */
 }
+
 /* centralizar form na div  */
 .bg-from form {
     display: grid;
@@ -105,17 +118,21 @@ textarea{
     transition: 1s;
 }
 
-.resposta-from{
+.resposta-from {
     font-size: 1.6rem;
-    color: #fff;
+    color: #020202;
     text-align: center;
-    background-color: rgb(47, 189, 255);
+    background-color: white;
     width: 400px;
-    margin: 0 auto;
     padding: 40px;
     border: 1px solid #ffffff;
     letter-spacing: 1px;
     border-radius: 10px;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
 }
 

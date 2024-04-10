@@ -2,8 +2,14 @@ export function initFormContato() {
     const corpoForm = document.querySelector('#form-contato');
     const btnEnviar = document.querySelector('#btn-from-contato'); // Selecionar o elemento do botão, não o valor
     const msgEnvio = document.querySelector('.resposta-from')
-    console.log(msgEnvio);
+    const secaocontato = document.querySelector('.corpo-contato');
 
+    // console.log(secaocontato);
+
+    function opacidadeSecao() {
+        secaocontato.classList.add('opacit');
+    }
+    // opacidadeSecao()
     function addLoading() {
         btnEnviar.innerHTML = '<img src="../img/loadAzul.png">';
     }
@@ -11,6 +17,7 @@ export function initFormContato() {
     function confirEnvio() {
         msgEnvio.innerHTML = 'Dados Enviado Com Sucesso, Logo Retornaremos'
         msgEnvio.style.display = 'block'
+        opacidadeSecao()
         setTimeout(function () {
             msgEnvio.remove();
         }, 7000);
@@ -55,10 +62,11 @@ export function initFormContato() {
             }, 3000);
         });
         console.log(name, email, telefone, msg);
-
-
     }
 
     corpoForm.addEventListener('submit', handleSubmit);
 
 }
+
+
+// criar a function para adicionar a class.
