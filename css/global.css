@@ -23,7 +23,7 @@ h3{
     font-size:1.5rem;
 }
 .paragrafo{
-    font-size:1.1rem;
+    font-size:1.2rem;
 }
 
 .container {
@@ -50,6 +50,7 @@ img {
   /* max-width: 100%; */
 }
 
+/* icones Rede social */
 
 /* Mídia queries para diferentes larguras de tela */
 @media(max-width: 1024px) {

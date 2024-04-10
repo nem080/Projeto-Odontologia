@@ -24,7 +24,7 @@
     width: 900px;
     margin:0 auto;
 }
-.text-descr-blog p{
+.text-descr-blog .paragrafo{
     /* padding-bottom: 30px; */
     color: #686868;
     line-height: 1.5em;

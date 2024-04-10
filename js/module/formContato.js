@@ -68,5 +68,3 @@ export function initFormContato() {
 
 }
 
-
-// criar a function para adicionar a class.

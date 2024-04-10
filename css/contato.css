@@ -2,7 +2,7 @@
     background: #007bff;
     padding: 20px;
     position: relative;
-    /* Alterado para relativo */
+    /* height: 1900px; */
 }
 
 .bg-contato .titulo-s {
@@ -11,16 +11,58 @@
 }
 
 .corpo-contato {
-    display: grid;
-    grid-template-columns:repeat(2, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    gap: 80px;
-    justify-content: space-between;
+    gap: 50px;
+}
+
+.descricao-contato{
+    border: 2px solid #ddd;
+    max-width: 640px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #002ca4;
+}
+.corpo-contato h3{
+    color: #fff;
+    font-weight: bold;
+    text-align: start;
+    margin: 50px 60px 30px;
+    text-transform: uppercase;
+}
+.corpo-contato .paragrafo{
+    color: #fff;
+    margin: 10px 40px 30px;
+}
+
+.corpo-contato ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 30px 0px 20px 40px;
+}
+
+.corpo-contato li {
+    display: flex;
+    padding: 10px;
+    font-size: 18px;
 
 }
-.no-opacit{
-    opacity: 1
+
+.corpo-contato a i {
+    font-size: 2.1875rem;
+    color: #fff;
 }
+
+.corpo-contato a i:hover {
+    transform: scale(1.2);
+    color: #a4a4a4;
+    transition: 0.5s;
+}
+
 .opacit{
     opacity: 0.2;
 }
@@ -30,13 +72,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #0173eca8;
+    background-color: #386cf9;
     max-width: 600px;
     height: auto;
-    /* Defina a altura como auto para se ajustar ao conteúdo */
     padding: 20px;
-    /* Adicione um pouco de padding para espaçamento */
+    /* margin: 0 auto; */
+    border-radius: 10px;
+    box-shadow:10px 10px 10px  #002ca4;
+    border: 2px solid #ddd;
 }
+
 
 /* centralizar form na div  */
 .bg-from form {
