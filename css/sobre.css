@@ -2,6 +2,13 @@
     background-color: #fff;
     margin-bottom: 70px;
 }
+.bg-sobre .titulo-oculto{
+    display: none;
+    font-size: 1.8rem;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+}
 
 .corpo-sobre{
     display: grid;
@@ -74,6 +81,9 @@
         display: inline-block;
 
     }
+    .bg-sobre .titulo-oculto{
+        
+    }
     .descri-sobre .titulo-s{
         margin-bottom: 1rem;
     }
@@ -114,6 +124,12 @@
     .bg-sobre {
 
         margin-bottom: 40px;
+    }
+    .bg-sobre .titulo-oculto {
+        display: block;
+        text-align: center;
+        margin:10px 0 20px;
+        color: #000;
     }
     .corpo-sobre {
         grid-template-columns: 1fr;
@@ -170,14 +186,14 @@
 }
 
 @media (max-width:414px) {
+
     .img-sobre img {
         margin: 0 auto;
         border-radius: 0.625rem;
         width: 300px;
         }
-    
-    /* .descri-sobre p {
-        font-size: 16px;
-    } */
+    .bg-sobre .titulo-oculto {
 
+        font-size: 1rem;
+    }
 }

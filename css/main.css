@@ -15,6 +15,7 @@
     justify-content: center;
     gap: 2.5rem;
     margin: 1.25rem 0;
+    flex-wrap: wrap;
 }
 .btns-inicio{
     margin-bottom:2.5rem;
@@ -35,6 +36,7 @@
 }
 .descricao-main{
     width: 39.375rem;
+    flex-direction: 2;
 }
 
 .descricao-main .paragrafo{
@@ -136,7 +138,7 @@
     }
     
 }
-@media (max-width:414px){
+@media (max-width:415px){
     .bg-header{
         margin-bottom: 30px;
     }
@@ -151,11 +153,13 @@
     .btns-inicio{
         display:block;
         max-width: 100%;
+        gap: 0px;
     }
     .btns-inicio .orc, .serv{
         margin-bottom: 20px;
         text-align: center;
-        text-transform: uppercase;
+        text-transform: capitalize;
+        font-size: 1rem;
     }
     .descricao-main {
         width: 19rem;

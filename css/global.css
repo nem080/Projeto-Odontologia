@@ -37,9 +37,18 @@ h3{
     font-weight: bold;
     margin-bottom: 2.5rem;
     text-align: center;
+    text-transform: capitalize;
 }
 .titulo-s{
     font-size: 2rem;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    text-transform: capitalize;
+}
+.titulo-oculto{
+    font-size: 1.8rem;
+    display: none;
     font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
     font-weight: bold;
     margin-bottom: 2.5rem;
@@ -61,7 +70,11 @@ img {
     .titulo-s {
         font-size:1.75rem;
     }
-
+    
+    .titulo-oculto {
+        font-size: 1.75rem;
+        display: block;
+    }
     .titulo-pequeno {
         font-size: 1.25rem;
     }
@@ -73,15 +86,19 @@ img {
 
 @media (max-width: 769px) {
     .titulo-p {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     
     .titulo-s {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+    }
+    .titulo-oculto {
+        font-size: 1.5rem;
+        display: block;
     }
 
     .titulo-pequeno {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
 
     .paragrafo {
@@ -97,7 +114,10 @@ img {
     .titulo-s {
         font-size: 1rem;
     }
-
+    .titulo-oculto {
+        font-size: 1rem;
+        display: block;
+    }
     .titulo-pequeno {
         font-size: 0.875rem;
     }
@@ -107,7 +127,7 @@ img {
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 415px) {
     .titulo-p {
         font-size: 1rem;
     }
@@ -115,7 +135,10 @@ img {
     .titulo-s {
         font-size: 1rem;
     }
-
+    .titulo-oculto {
+        font-size: 1rem;
+        display: block;
+    }
     .titulo-pequeno {
         font-size: 0.75rem;
     }

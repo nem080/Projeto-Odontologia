@@ -216,3 +216,18 @@ textarea{
         transform: rotate(360deg);
     }
 }
+
+/* estilização responsividade */
+
+@media(max-width: 1025px){
+    .corpo-contato {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .bg-contato .titulo-s{
+        text-align: center;
+    }
+    .descricao-contato{
+        max-width: 600px;
+    }
+}
