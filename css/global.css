@@ -20,10 +20,10 @@ h2{
     font-size:2rem;
 }
 h3{
-    font-size:1.5rem;
+    font-size:1.8rem;
 }
 .paragrafo{
-    font-size:1.1rem;
+    font-size:1.2rem;
 }
 
 .container {
@@ -34,14 +34,23 @@ h3{
 .titulo-p{
     font-size: 2.5rem;
     font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 2.5rem;
     text-align: center;
+    text-transform: capitalize;
 }
 .titulo-s{
     font-size: 2rem;
     font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    text-transform: capitalize;
+}
+.titulo-oculto{
+    font-size: 1.8rem;
+    display: none;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
+    font-weight: bold;
     margin-bottom: 2.5rem;
 }
 
@@ -50,6 +59,7 @@ img {
   /* max-width: 100%; */
 }
 
+/* icones Rede social */
 
 /* Mídia queries para diferentes larguras de tela */
 @media(max-width: 1024px) {
@@ -60,7 +70,11 @@ img {
     .titulo-s {
         font-size:1.75rem;
     }
-
+    
+    .titulo-oculto {
+        font-size: 1.75rem;
+        display: block;
+    }
     .titulo-pequeno {
         font-size: 1.25rem;
     }
@@ -72,15 +86,19 @@ img {
 
 @media (max-width: 769px) {
     .titulo-p {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
         }
     
     .titulo-s {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+    }
+    .titulo-oculto {
+        font-size: 1.5rem;
+        display: block;
     }
 
     .titulo-pequeno {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
 
     .paragrafo {
@@ -96,7 +114,10 @@ img {
     .titulo-s {
         font-size: 1rem;
     }
-
+    .titulo-oculto {
+        font-size: 1rem;
+        display: block;
+    }
     .titulo-pequeno {
         font-size: 0.875rem;
     }
@@ -106,7 +127,7 @@ img {
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 415px) {
     .titulo-p {
         font-size: 1rem;
     }
@@ -114,7 +135,10 @@ img {
     .titulo-s {
         font-size: 1rem;
     }
-
+    .titulo-oculto {
+        font-size: 1rem;
+        display: block;
+    }
     .titulo-pequeno {
         font-size: 0.75rem;
     }
