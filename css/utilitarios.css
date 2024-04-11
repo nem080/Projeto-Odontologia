@@ -14,10 +14,13 @@
     color: #fff;
     border: none;
     padding: 10px 30px;
-    font-size: 16px;
+    font-size: 17px;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
 }
 
 .botao-geral:hover {

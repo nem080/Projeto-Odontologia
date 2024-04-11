@@ -306,9 +306,9 @@
         </article>
     </section>
 
-    <section class="bg-contato space-bottom" id="contato">
+    <section class="bg-contato" id="contato">
         <h2 class="titulo-s ">Fale conosco!</h2>
-        <div class="corpo-contato ">
+        <div class="corpo-contato space-bottom">
             <div class="descricao-contato">
                 <h3>Retonaremos assim que possivel!!</h3>
                 <p class="paragrafo">
@@ -317,16 +317,19 @@
                     formulário que o quanto antes entraremos em contato o mais breve possível.
                 </p>
 
-                <div class="localiza">
-                    <ul>
-                        <li>local</li>
-                        <li>pontode referencia</li>
-                        <li> CRM 000000O</li> 
-                        <li>local</li>
-                        <li>pontode referencia</li>
-                        <li> CRM 000000O</li> 
-                    </ul>
-                </div>
+                <!-- <div class="localiza">
+                    <div class="endereco">
+                        <p>local</p>
+                        <p>pontode referencia</p>
+                        <p> CRM 000000O</p>
+                    </div>
+                    <div class="endereco">
+                        <p>local</p>
+                        <p>pontode referencia</p>
+                        <p> CRM 000000O</p>
+                    </div>
+                    
+                </div> -->
                 <ul>
                     <li><a href="https://www.instagram.com/dra.cicera_f_santoss?igsh=NnhhcDN0b3cxbmVq"
                             target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -339,7 +342,7 @@
                 </ul>
             </div>
 
-            <div class="bg-from space-bottom">
+            <div class="bg-from">
                 <form id="form-contato">
                     <label class="spandegrid-4" for="nome">Nome:*</label>
                     <input class="spandegrid-4" type="text" id="nome" name="nome" required>
@@ -350,7 +353,7 @@
 
                     <label class="spandegrid-3" for="telefone">Telefone:*</label>
                     <input class="spandegrid-3" type="tel" id="telefone" name="telefone" required
-                        placeholder="(__)_ ____- _____" maxlength="19">
+                        placeholder="(__)_ ____- _____" maxlength="11">
 
                     <label class="spandegrid-4" for="mensagem">Mensagem:*</label>
                     <textarea class="spandegrid-4" id="mensagem" name="mensagem" rows="4" cols="50" maxlength="200"
@@ -364,6 +367,43 @@
         <!-- Link para a página de agradecimento -->
         <div class="resposta-from">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias.</div>
     </section>
+
+    <!-- footer -->
+    <footer class="bg-footer">
+        <div class="container">
+            <div class="footer-info">
+                <h3>Informações de Contato</h3>
+                <p>Endereço: R. Silva Jardim, 187 - Centro, São Bernardo do Campo - SP, 09715-090</p>
+                <p>Telefone: (11) 98114-0012</p>
+                <p>Email: exemplo@gmail.com</p>
+            </div>
+
+            <div class="footer-redes-sociais">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/dra.cicera_f_santoss?igsh=NnhhcDN0b3cxbmVq" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://m.facebook.com/cicera.fatimadossantos.3?locale=pt_BR" target="_blank"><i
+                                class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/cicera-f%C3%A1tima-dos-santos-baa707191/?trk=public_profile_browsemap_profile-result-card_result-card_full-click&originalSubdomain=br"
+                            target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://wa.me/5511981140012?text=Olá vim atrasvez do site, queria gostaria de solicitar atendimento."
+                            target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-links-nav">
+                <ul>
+                    <li><a href="#">inicio</a></li>
+                    <li><a href="#">sobre</a></li>
+                    <li><a href="#">serviço</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="autorais">⎘ Desenvolvido por Create Code Web </p>
+    </footer>
+
 
     <script type="module" src="../js/script.js"></script>
 </body>

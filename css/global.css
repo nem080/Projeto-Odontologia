@@ -20,7 +20,7 @@ h2{
     font-size:2rem;
 }
 h3{
-    font-size:1.5rem;
+    font-size:1.8rem;
 }
 .paragrafo{
     font-size:1.2rem;
@@ -34,14 +34,14 @@ h3{
 .titulo-p{
     font-size: 2.5rem;
     font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 2.5rem;
     text-align: center;
 }
 .titulo-s{
     font-size: 2rem;
     font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 2.5rem;
 }
 
