@@ -61,7 +61,11 @@
 }
 
 /* resposividade */
-@media(max-width:1024px){
+@media(max-width:1025px){
+    .descri-inicio {
+        margin: 0 0px 0 0;
+
+    }
     .corpo-inicio{
         display: block;
         margin: 0 auto;
@@ -173,3 +177,31 @@
     }
         
 }
+
+/* seletor de seção teste  */
+/* .selectors-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+}
+
+.selector {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #5ba6f7;
+    margin-bottom: 10px;
+    cursor: pointer;
+} */
+
+/* Adicione estilos para cada selector individual se desejar cores diferentes */
+/* .selector:nth-child(1) { background-color: red; } */
+/* .selector:nth-child(2) { background-color: green; } */
+/* .selector:nth-child(3) { background-color: blue; } */
+/* .selector:nth-child(4) { background-color: orange; } */
+/* .selector:nth-child(5) { background-color: purple; } */

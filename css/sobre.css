@@ -180,12 +180,12 @@
     }
 
     .descri-sobre .paragrafo {
-        /* font-size: 16px; */
-        margin: 0 60px 30px;
+        font-size: 16px;
+        padding: 0 10px;
     }
 }
 
-@media (max-width:414px) {
+@media (max-width:415px) {
 
     .img-sobre img {
         margin: 0 auto;
@@ -196,4 +196,5 @@
 
         font-size: 1rem;
     }
+
 }
