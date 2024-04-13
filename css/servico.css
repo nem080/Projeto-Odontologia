@@ -23,6 +23,13 @@
 .corpo-servico h3{
     padding: 10px 0;
 }
+.card-servico{
+    border-radius: 10px;
+    border: 1px solid #262626;
+    padding: 50px;
+    box-shadow: 10px 10px 20px #000000;
+    margin: 0 auto;
+}
 .card-servico .titulo-pequeno{
     white-space: nowrap;
 }
@@ -31,9 +38,6 @@
     color: #323232;
     max-width: 341.22px;
     margin: 0 auto;
-}
-.card-servico{
-    margin: 0 15px 30px;
 }
 
 .centralizar{
@@ -45,6 +49,25 @@
 
 /* responsividade */
 @media (max-width: 1025px){
+    .corpo-servico {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            /* align-items: center; */
+            text-align: center;
+            gap: 20px;
+            padding: 10px;
+        }
+    .spand {
+        grid-column: 1/-1;
+
+    }
+    /* .card-servico {
+        border-radius: 10px;
+        border: 1px solid #262626;
+        padding: 50px;
+        box-shadow: 10px 10px 20px #000000;
+    } */
     .bg-servicos .titulo-s {
         text-align: center;
     }
@@ -99,7 +122,7 @@
     .bg-servicos .titulo-s{
         margin:10px 0 40px;
     }
-    .card-servico p {
+    .card-servico .paragrafo {
         line-height: 1.2;
         color: #323232;
         margin:0 auto;
@@ -119,19 +142,27 @@
     .card-servico img{
         width: 130px;
     }
-    .card-servico p{
+    .card-servico .paragrafo{
         width: 300px;
         text-align: center;
         margin: 0 auto;
     }
 }
 
-@media(max-width:414px){
+@media(max-width:415px){
+    .card-servico{
+        width: 360px;
+    }
     .corpo-servico {
         grid-template-columns:1fr;
     }
     .bg-servicos .titulo-s {
         margin: 10px 0 20px;
         font-weight: 700;
+    }
+    .card-servico .paragrafo{
+        max-width: 225px;
+        margin: 0 auto;
+        font-size:16px;
     }
 }
