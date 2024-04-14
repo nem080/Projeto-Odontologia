@@ -278,6 +278,6 @@ textarea{
         left: 50%;
         transform: translate(-50%, -50%);
         box-shadow: 0px 0px 0px 0px #fcfcfc;
-        display: block;
+        display: none;
     }
 }
