@@ -227,3 +227,10 @@
         margin-bottom: 20px;
     }
 }
+@media(max-width:376px){
+    .descri-sobre .paragrafo {
+            text-align: justify;
+            margin: 0px 20px 30px;
+            width: 305px;
+        }
+}
