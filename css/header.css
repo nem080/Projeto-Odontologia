@@ -131,7 +131,7 @@
     }
 }
 
-@media (max-width:600px){
+@media (max-width:635px){
     .bg-header{
         margin-bottom: 40px
     }
@@ -140,7 +140,7 @@
     }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 429px) {
     .bg-header .container {
         margin-bottom: 20px;
     }
@@ -164,10 +164,15 @@
         align-items: center;
         /* margin-bottom: 30px; */
     }
+    .menu-toggle i{
+        font-size: 1.7rem;
+        color: #003b93;
+    }
 
     .menu-mobile a {
         font-size: 0.8rem;
         color: #fff;
+        font-size: .9rem;
     }
     
 }

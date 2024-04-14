@@ -127,25 +127,28 @@ img {
     }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 416px) {
     .titulo-p {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 
     .titulo-s {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
     .titulo-oculto {
-        font-size: 1rem;
+        font-size: 1.4rem;
         display: block;
     }
     .titulo-pequeno {
-        font-size: 0.75rem;
+        font-size: 1.3rem;
     }
 
     .paragrafo {
-        font-size: 0.625rem;
-        text-align: justify;
-
+        font-size: .75rem;
+        text-align: justify;       
+        color: black;
+        max-width: 100%;
+        margin: 5px 0px 0px;
     }
+
 }
