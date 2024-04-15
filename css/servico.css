@@ -1,5 +1,6 @@
 .bg-servicos{
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+    background-color: #fff;
 }
 .bg-servicos .titulo-s{
     color: #000;
@@ -83,9 +84,7 @@
     .descricao-main{
         margin: 0 auto;
     }
-    .imagem-inicio img{
-        margin: 0 auto;
-    }
+
 }
 @media (max-width:884px) {
     .corpo-servico {
@@ -173,5 +172,11 @@
         text-align: justify;
         margin: 5px 20px 10px;
         padding: 0 10px;
+    }
+}
+@media (max-width:376px) {
+    .centralizar .botao-geral {
+        display: block;
+        padding: 15px 30px;
     }
 }

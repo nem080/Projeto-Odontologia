@@ -192,6 +192,20 @@
         
 }
 
+@media (max-width:376px){
+
+    .imagem-inicio img {
+        /* margin: 0 auto; */
+        border-radius: 0.625rem;
+        /* padding-bottom: 5rem; */
+        width: 680px;
+    }
+        .text-descr-blog .paragrafo:first-child {
+            margin: 0 0px 10px;
+            text-align: justify;
+        }
+}
+
 /* seletor de seção teste  */
 /* .selectors-container {
     position: fixed;
