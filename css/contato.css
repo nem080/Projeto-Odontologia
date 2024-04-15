@@ -30,7 +30,7 @@
     box-shadow: 10px 10px 10px #002ca4;
     margin: 0 auto;
 }
-.corpo-contato h3{
+.corpo-contato .titulo-pequeno{
 
     color: #fff;
     font-weight: bold;
@@ -225,12 +225,20 @@ textarea{
         grid-template-columns: 1fr;
         gap: 40px;
     }
+    .corpo-contato ul {
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding:0 0 20px;
+        margin: 0 auto;
+    }
     .bg-contato .titulo-s{
         text-align: center;
     }
     .descricao-contato{
         max-width: 600px;
     }
+
 }
 
 @media (max-width:415px){
@@ -259,6 +267,14 @@ textarea{
     display: block;
     grid-column: 2 / 8;
  }
+
+ .corpo-contato ul {
+     display: flex;
+     align-items: center;
+     flex-wrap: nowrap;
+     justify-content:center;
+     margin:0 auto;
+ }
 }
 @media (max-width:376px){
     .resposta-from {
@@ -280,4 +296,21 @@ textarea{
         box-shadow: 0px 0px 0px 0px #fcfcfc;
         display: none;
     }
+    .corpo-contato .titulo-pequeno{
+        margin:20px;
+        text-align: center;
+    }
+    .corpo-contato .paragrafo{
+        font-size: 16px;
+        margin: 10px;
+        padding-bottom: 10px;
+    }
+    .corpo-contato ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content:center;
+        margin: 30px 0px 20px;
+    }
+    
 }

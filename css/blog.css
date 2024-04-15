@@ -111,26 +111,28 @@
     }
 }
 
-@media (max-width:415px) {
+@media (max-width:429px) {
     .corpo-blog .titulo-s{
-        width: 300px;
-       padding: 0 0px;
+        width: 280px;
+        padding:10px;
+        margin: 0 auto;
     }
     .corpo-blog .text-descr-blog {
         width: 100%;
     }
     .text-descr-blog .paragrafo:first-child {
-        margin: 0 0px 10px;
+        margin: 0 0px 0px;
         text-align: justify;
     }
     .text-descr-blog .paragrafo{
-       margin:0 auto;
+       padding: 10px;
        text-align: justify;
        margin: 0 0 20px;
     }
     .text-descr-blog .botao-geral {
         width: 60%;
         padding: 10px 30px;
+        font-size: 13px;
     }
     #data-plubli {
         margin: 0px;
@@ -144,8 +146,8 @@
         margin: 0 auto;
     }
     .corpo-blog .titulo-s {
-        width: 270px;
-        padding:0 0 20px;
-        margin: 0px auto;
+        width: 100%;
+        padding:5px 0 20px;
+        /* margin: 0px auto; */
     }
 }

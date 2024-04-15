@@ -1,9 +1,12 @@
+.marcador-menu{
+    color: #460000;
+    border-bottom: 4px solid #097bf5;
+    border-radius: 3px;
+}
 .bg-header {
     background-color: #fff;
     margin-bottom: 80px;
 }
-
-
 
 .header-corpo {
     display: flex;
@@ -13,6 +16,9 @@
 
 .logo {
     width: 200px;
+}
+.logo img{
+    width: 60px;
 }
 
 .corpo-nav ul {
@@ -35,7 +41,9 @@
 }
 
 .corpo-nav a:hover {
-    color: #00438a;
+    color: #001f3f;
+    font-weight: bold;
+    transition: 1s;
 }
 
 .nave-zap-orc {
