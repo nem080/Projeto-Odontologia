@@ -22,7 +22,7 @@
     <title>Document</title>
 </head>
 
-<body> 
+<body>
     <header class="bg-header">
         <div class="header-corpo container">
             <div class="logo">
@@ -36,8 +36,8 @@
                 </ul>
             </nav>
             <div class="nave-zap-orc">
-                <a ></a>
-                    <!-- <i class="fab fa-whatsapp"></i> -->
+                <a></a>
+                <!-- <i class="fab fa-whatsapp"></i> -->
                 <a href="https://wa.me/5511981140012?text=Olá vim atrasvez do site, gostaria de solicitar atendimento."
                     target="_blank" class="botao-geral">Contato</a>
             </div>
@@ -64,6 +64,45 @@
             </ul>
         </nav>
     </header>
+    <main class="container">
+        <div class="corpo-form-orcamento">
+            <h1 class="titulo-p">Solicite seu  Orçamento!</h1>
+            <form action="#" method="post">
+                <label for="nome">Nome Completo:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="opcoes">Selecione uma opção:</label><br>
+                <select id="opcoes" name="opcoes" required>
+                    <option value="">Selecione o procedimento</option>
+                    <option value="opcao1">Opção 1</option>
+                    <option value="opcao2">Opção 2</option>
+                    <option value="opcao3">Opção 3</option>
+                    <option value="opcao4">Opção 4</option>
+                    <option value="opcao5">Opção 5</option>
+                    <option value="opcao6">Opção 6</option>
+                    <option value="opcao7">Opção 7</option>
+                    <option value="opcao8">Opção 8</option>
+                    <option value="opcao9">Opção 9</option>
+                    <option value="opcao10">Opção 10</option>
+                </select><br><br>
+
+                <label for="telefone">Telefone:</label><br>
+                <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [9]{1} [0-9]{4}-[0-9]{4}" required placeholder=""><br><br>
+
+                <label for="nascimento">Data de Nascimento:</label><br>
+                <input type="date" id="nascimento" name="nascimento" required><br><br>
+
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+
 
     <footer>
         <div class="bg-footer">
@@ -75,19 +114,23 @@
             <div class="footer-corpo space-bottom">
                 <div class="footer-info">
                     <h3 class="titulo-pequeno">Informações de Contato</h3>
-                    <p class="paragrafo"><i class="fas fa-phone"></i> <strong>Telefone:</strong> <a href="tel:+55123456789">+55 (11) 9 8114-0012</a></p>
+                    <p class="paragrafo"><i class="fas fa-phone"></i> <strong>Telefone:</strong> <a
+                            href="tel:+55123456789">+55 (11) 9 8114-0012</a></p>
                     <!-- <a href="mailto:cicerafs@uol.com.br?subject=Assunto do e-mail&body=Corpo do e-mail">Enviar e-mail</a>
  -->
-                    <p class="paragrafo"><i class="fas fa-envelope"></i> <strong>Email:</strong><a href="mailto:cicerafs@uol.com.br?subject=Mais informações&body=Olá"> cicerafs@uol.com.br</a></p>
+                    <p class="paragrafo"><i class="fas fa-envelope"></i> <strong>Email:</strong><a
+                            href="mailto:cicerafs@uol.com.br?subject=Mais informações&body=Olá"> cicerafs@uol.com.br</a>
+                    </p>
                     <p class="paragrafo"><i class="fas fa-id-card"></i> <strong>CRO:</strong> 131920</p>
                     <a href="https://www.google.com.br/maps/place/R.+Silva+Jardim,+187+-+Centro,+S%C3%A3o+Bernardo+do+Campo+-+SP,+09715-090/@-23.7140009,-46.5497312,16.76z/data=!4m6!3m5!1s0x94ce4185cc0b07a7:0x3520ed67d87765c8!8m2!3d-23.7140045!4d-46.5473084!16s%2Fg%2F11g8bg7d89?entry=ttu"
                         target="_blank">
-                        <p class="paragrafo"><i class="fas fa-map-marker"></i> <strong> Endereço:</strong> R. Silva Jardim,
+                        <p class="paragrafo"><i class="fas fa-map-marker"></i> <strong> Endereço:</strong> R. Silva
+                            Jardim,
                             187 <br>Centro, São Bernardo do Campo - SP, 09715-090</p><span class="cortext">Ver no
                             mapa</span>
                     </a>
                 </div>
-    
+
                 <div class="footer-redes-sociais container">
                     <h3 class="titulo-pequeno">Redes Sociais</h3>
                     <ul class="redes-sociais-lista">
@@ -113,14 +156,13 @@
                 </div>
             </div>
             <p class="autorais">
-                © 2024. <a href="https://www.instagram.com/create_codeweb/?igsh=dzI0ZHcyNWZueW1u&utm_source=qr">Create Code
+                © 2024. <a href="https://www.instagram.com/create_codeweb/?igsh=dzI0ZHcyNWZueW1u&utm_source=qr">Create
+                    Code
                     Web</a>. Todos os direitos reservados.
             </p>
         </div>
     </footer>
-    
-    
     <script type="module" src="../js/script.js"></script>
-    </body>
-    
-    </html
+</body>
+
+</html
