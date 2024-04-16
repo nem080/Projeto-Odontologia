@@ -56,25 +56,30 @@
         </div>
         <nav class="menu-mobile">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servico">Serviço</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <ul class="menu-desktop">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a class="marcador-menu" href="orcamento.html">Orçamento</a></li>
+                    <li><a href="saiba-mais.html">Sobre</a></li>
+                </ul>
             </ul>
         </nav>
     </header>
-    <main class="container">
+    <main class=" bg-orcamento container">
+        <h1 class="titulo-p">Solicite seu  Orçamento!</h1>
         <div class="corpo-form-orcamento">
-            <h1 class="titulo-p">Solicite seu  Orçamento!</h1>
             <form action="#" method="post">
-                <label for="nome">Nome Completo:</label><br>
-                <input type="text" id="nome" name="nome" required><br><br>
+                <div class="nome">
+                    <label for="nome">Nome Completo*:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@teste.com">
+                </div>
 
-                <label for="opcoes">Selecione uma opção:</label><br>
+               <div class="select">
+                <label for="opcoes">Selecione uma opção:</label>
                 <select id="opcoes" name="opcoes" required>
                     <option value="">Selecione o procedimento</option>
                     <option value="opcao1">Opção 1</option>
@@ -87,16 +92,24 @@
                     <option value="opcao8">Opção 8</option>
                     <option value="opcao9">Opção 9</option>
                     <option value="opcao10">Opção 10</option>
-                </select><br><br>
+                </select>
+               </div>
 
-                <label for="telefone">Telefone:</label><br>
-                <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [9]{1} [0-9]{4}-[0-9]{4}" required placeholder=""><br><br>
+                <div class="tel">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [9]{1} [0-9]{4}-[0-9]{4}" required
+                        placeholder="(11)9 1234-5678"> 
+                </div>
 
-                <label for="nascimento">Data de Nascimento:</label><br>
-                <input type="date" id="nascimento" name="nascimento" required><br><br>
+                <div class="nacimento">
+                    <label for="nascimento">Data de Nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
 
-                <label for="mensagem">Mensagem:</label><br>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br><br>
+                <div class="msg">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="50" required placeholder="Nos deixe uma msg..."></textarea>
+                </div>
 
                 <input type="submit" value="Enviar">
             </form>
