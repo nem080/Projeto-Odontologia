@@ -1,13 +1,19 @@
 .bg-orcamento{
-    margin:0 0 40px;
+    padding: 90px 0;
 }
-form {
+
+.bg-orcamento .titulo-p{
+    color: #007bff;
+}
+.corpo-form-orcamento form {
     max-width: 600px;
     margin: 0 auto;
+    border-radius: 10px;
     padding: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: aqua;
+    background-color: rgb(195, 195, 195);
+    z-index: 100;
 }
 
 .corpo-form-orcamento form {
@@ -17,7 +23,7 @@ form {
 }
 .corpo-form-orcamento label {
     margin: 0 0 5px 5px;
-    color: #000;
+    color: #1e1e1e;
 }
 input[type="text"],
 input[type="email"],
@@ -31,7 +37,9 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+.option[value="descri"]{
+    font-size: 20px;
+}
 .corpo-form-orcamento .select{
     grid-column:span 2;
 }
@@ -44,6 +52,28 @@ input[type="submit"]{
     width:100%;
     grid-column: span 2;
     margin: 0 auto;
+}
+
+/* STYLO LOADING */
+
+#btn-from-orcamento img {
+    margin: 0 auto;
+    width: 30px;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bg-orcamento .resposta-from{
+    display: none;
 }
 
 @media(width <= 429px){

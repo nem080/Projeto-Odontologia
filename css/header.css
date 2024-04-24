@@ -1,11 +1,6 @@
-.marcador-menu{
-    color: #460000;
-    border-bottom: 4px solid #097bf5;
-    border-radius: 3px;
-}
 .bg-header {
     background-color: #fff;
-    margin-bottom: 80px;
+    /* margin-bottom: 40px; */
 }
 
 .header-corpo {
@@ -14,9 +9,9 @@
     align-items: center;
 }
 
-.logo {
-    width: 200px;
-}
+/* .logo {
+    width: 250px;
+    background-color: #bb15c4;} */
 .logo img{
     width: 60px;
 }
@@ -36,7 +31,7 @@
     font-size: 1.1875rem;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: 400;
-    color: #007bff;
+    color: #000;
     text-transform: capitalize;
 }
 
@@ -51,10 +46,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    /* max-width: 300px;
+    background-color: #bb15c4; */
 }
 
 .nave-zap-orc i {
-    font-size: 30px;
+    font-size: 35px;
     margin: 5px;
     color: #014FA3;
 }
