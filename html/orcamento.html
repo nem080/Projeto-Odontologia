@@ -36,10 +36,9 @@
                 </ul>
             </nav>
             <div class="nave-zap-orc">
-                <a></a>
-                <!-- <i class="fab fa-whatsapp"></i> -->
-                <a href="https://wa.me/5511981140012?text=Olá vim atrasvez do site, gostaria de solicitar atendimento."
-                    target="_blank" class="botao-geral">Contato</a>
+                <a href="https://wa.me/5511981140012?text=Olá vim atrasvez do site, queria gostaria de solicitar atendimento."
+                    target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <!-- <a  href="./orcamento.html" class="botao-geral">Orçamento</a> -->
             </div>
             <!-- Botão de alternância para menu mobile -->
         </div>
@@ -47,7 +46,7 @@
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
             <div class="logo">
-                <a href="index.html"><img src="../img/logo-só.jpeg" alt="logo" width="48"></a>
+                <a href="index.html"><img src="../img/logo-escrita-Preta.png" alt="logo" width="48"></a>
             </div>
             <div class="nave-zap-orc">
                 <a href="http://"><i class="fab fa-whatsapp"></i></a>
@@ -64,55 +63,57 @@
             </ul>
         </nav>
     </header>
-    <main class=" bg-orcamento container">
-        <h1 class="titulo-p">Solicite seu  Orçamento!</h1>
+    <main class=" bg-orcamento ">
+        <h1 class="titulo-p">Solicite seu Orçamento!</h1>
         <div class="corpo-form-orcamento">
-            <form action="#" method="post">
+            <form id="orcamento-form" action="" method="POST" name="formulario-orcamento">
                 <div class="nome">
                     <label for="nome">Nome Completo*:</label>
-                    <input type="text" id="nome" name="nome" required>
+                    <input type="text" id="nome" name="data[Nome]" required>
                 </div>
 
                 <div class="email">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="exemplo@teste.com">
+                    <input type="email" id="email" name="data[Email]" required placeholder="exemplo@teste.com">
                 </div>
 
-               <div class="select">
-                <label for="opcoes">Selecione uma opção:</label>
-                <select id="opcoes" name="opcoes" required>
-                    <option value="">Selecione o procedimento</option>
-                    <option value="opcao1">Opção 1</option>
-                    <option value="opcao2">Opção 2</option>
-                    <option value="opcao3">Opção 3</option>
-                    <option value="opcao4">Opção 4</option>
-                    <option value="opcao5">Opção 5</option>
-                    <option value="opcao6">Opção 6</option>
-                    <option value="opcao7">Opção 7</option>
-                    <option value="opcao8">Opção 8</option>
-                    <option value="opcao9">Opção 9</option>
-                    <option value="opcao10">Opção 10</option>
-                </select>
-               </div>
+                <div class="select">
+                    <label for="opcoes">Selecione uma opção:</label>
+                    <select id="opcoes" name="data[Opcoes_Procedimento]" required>
+                        <option value="" disabled selected hidden>SELECIONE UMA OPÇÃO:</option>
+                        <option value="Implantes dentários">Implantes dentários</option>
+                        <option value="Restaurações dentárias">Restaurações dentárias</option>
+                        <option value="Bichectomia">Bichectomia</option>
+                        <option value="Limpezas dentárias">Limpezas dentárias</option>
+                        <option value="Lipoaspiração de papada">Lipoaspiração de papada</option>
+                        <option value="Preenchimento facial">Preenchimento facial</option>
+                        <option value="Bioestimulador de colágeno">Bioestimulador de colágeno</option>
+                        <option value="Toxina botulínica">Toxina botulínica</option>
+                        <option value="Fios de tração PDO">Fios de tração PDO</option>
+                    </select>
+
+                </div>
 
                 <div class="tel">
                     <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" pattern="\([0-9]{2}\) [9]{1} [0-9]{4}-[0-9]{4}" required
-                        placeholder="(11)9 1234-5678"> 
+                    <input type="tel" id="telefone" name="data[Telefone]" required placeholder="(11) 9 1234-5678" maxlength="11">
                 </div>
 
                 <div class="nacimento">
                     <label for="nascimento">Data de Nascimento:</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
+                    <input type="date" id="nascimento" name="data[Nascimento]" required>
                 </div>
 
                 <div class="msg">
                     <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="4" cols="50" required placeholder="Nos deixe uma msg..."></textarea>
+                    <textarea id="mensagem" name="data[Mensagem]" rows="4" cols="50" required
+                        placeholder="Nos deixe uma msg..."></textarea>
                 </div>
-
-                <input type="submit" value="Enviar">
+                <button class="botao-geral" type="submit" value="Enviar" id="btn-from-orcamento" >ENVIAR
+                    <!-- <img src="../img/loadAzul.png" alt="loading"> -->
+                </button>
             </form>
+            <div class="resposta-from">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias.</div>
         </div>
     </main>
 
@@ -175,7 +176,7 @@
             </p>
         </div>
     </footer>
-    <script type="module" src="../js/script.js"></script>
+    <script type="module" src="../js/module/orcamento-from.js"></script>
 </body>
 
 </html

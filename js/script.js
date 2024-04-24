@@ -4,13 +4,14 @@ import { initVerMaisBlog } from './module/btn-blog-ver-mais.js';
 import { initFormContato } from './module/formContato.js';
 import { initScrollSuave } from './module/scroll-suave.js';
 import { initSecaoSeletor } from './module/seletor-secao.js';
+// import { initFormOrcamento } from './module/orcamento-from.js';
 
-// form - contato
+
 initMenuMobile();
 initBtnVerMais();
 initVerMaisBlog();
 initFormContato();
 initScrollSuave();
 initSecaoSeletor();
-
+// initFormOrcamento();
 
