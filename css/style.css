@@ -8,3 +8,20 @@
 @import './contato.css';
 @import './footer.css';
 @import './page-orcamento.css';
+@import './slide-sobre.css';
+
+
+.corpo-bg-Qualififc{
+    width: 400px;
+    display: block;
+    background-color: aqua;
+    
+}
+.corpo-bg-Qualififc img{
+    padding: 20px 0;
+    margin: 0 auto;
+}
+.corpo-bg-Qualififc, h2, p{
+    text-align: center;
+    margin: 10px 10px;
+}

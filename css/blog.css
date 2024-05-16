@@ -10,8 +10,9 @@
 }
 .corpo-blog .titulo-s{
     /* margin: 0 0 20px 90px; */
-    line-height: 1.9rem;
+    line-height: 1.5;
     text-align: center;
+
 }
 
 #data-plubli{
@@ -66,7 +67,7 @@
         padding: 0 60px 50px;
         width: 520px;
         margin: 0 auto;
-        line-height: 2.4rem;
+        line-height: 1.2;
     }
 }
 
