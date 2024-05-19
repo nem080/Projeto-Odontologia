@@ -40,14 +40,17 @@
     font-weight: bold;
     transition: 1s;
 }
+.activo {
+    color: #036ad1 !important;
+    font-weight: bold !important;
+    transition: 1s;
+}
 
 .nave-zap-orc {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    /* max-width: 300px;
-    background-color: #bb15c4; */
 }
 
 .nave-zap-orc i {
