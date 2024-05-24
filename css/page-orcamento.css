@@ -18,7 +18,7 @@
 
 .corpo-form-orcamento form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 .corpo-form-orcamento label {
@@ -40,12 +40,28 @@ textarea {
 .option[value="descri"]{
     font-size: 20px;
 }
+.corpo-form-orcamento .nome{
+    grid-column: span 4;
+}
+.corpo-form-orcamento .email{
+    grid-column: span 4;
+}
 .corpo-form-orcamento .select{
+    grid-column:span 4;
+}
+.corpo-form-orcamento .tel{
+    grid-column:span 2;
+}
+.corpo-form-orcamento .nacimento{
     grid-column:span 2;
 }
 
 .corpo-form-orcamento .msg{
+    grid-column: span 4;
+}
+.corpo-form-orcamento .botao-geral{
     grid-column: span 2;
+    grid-column: 1 / -1;
 }
 
 input[type="submit"]{
@@ -53,6 +69,8 @@ input[type="submit"]{
     grid-column: span 2;
     margin: 0 auto;
 }
+
+sel
 
 
 
