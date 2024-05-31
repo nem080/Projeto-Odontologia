@@ -1,5 +1,9 @@
 .bg-contato {
+<<<<<<< HEAD
+    background: #eef4ff;
+=======
     background: #FBFBFB;
+>>>>>>> main
     padding: 20px;
     position: relative;
 }
@@ -116,12 +120,12 @@ label:first-child {
 }
 
 label {
-    font-family: 'Robot', sans-serif, arial, helvetica;
-    color: #2c2c2c;
+    font-family: 'IBM Plex Serif', sans-serif, arial, helvetica;
+    color: #000;
     display: block;
     font-weight: 400;
-    font-size: 1.2rem;
-    margin: 10px 0 0px 10px;
+    font-size: 1.100rem;
+    margin: 10px 0 0px 0px;
     text-transform: capitalize;
 }
 input:focus, textarea:focus{
@@ -173,7 +177,7 @@ textarea{
 }
 
 .resposta-from {
-    font-family:  'Roboto', sans-serif;
+    font-family:  'IBM Plex Serif', sans-serif;
     font-weight: 600;
     font-size: 1.3rem;
     color: #020202;

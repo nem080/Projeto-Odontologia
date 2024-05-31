@@ -16,7 +16,16 @@
     align-items: center;
     margin: 20px 0;
 }
+.ocultar-sobre{
+    display: none;
+}
 
+.descri-sobre .LerMais{
+    color: #0056b3;
+    margin: 20px 0 0;
+    display: inline-block;
+    font-size: 19px;
+}
 .img-sobre img{
     margin:0 auto;
     border-radius: 50%;
@@ -24,7 +33,11 @@
 }
 .descri-sobre .titulo-s{
     font-size: 30px;
+<<<<<<< HEAD
+    margin-bottom:20px;
+=======
     margin-bottom: .5rem;
+>>>>>>> main
 }
 .descri-sobre .paragrafo{
     letter-spacing:0.4px;
