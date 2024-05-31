@@ -33,7 +33,11 @@
 }
 .descri-sobre .titulo-s{
     font-size: 30px;
+<<<<<<< HEAD
     margin-bottom:20px;
+=======
+    margin-bottom: .5rem;
+>>>>>>> main
 }
 .descri-sobre .paragrafo{
     letter-spacing:0.4px;
