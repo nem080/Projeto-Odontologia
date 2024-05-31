@@ -1,9 +1,11 @@
 .bg-orcamento{
     padding: 90px 0;
+    background-color: #eef4ff;
 }
 
 .bg-orcamento .titulo-p{
     color: #007bff;
+    font-size: 30px;
 }
 .corpo-form-orcamento form {
     max-width: 600px;
@@ -12,18 +14,24 @@
     padding: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: rgb(195, 195, 195);
+    background-color:#fff;
     z-index: 100;
+    color: #00a6ff;
 }
 
 .corpo-form-orcamento form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+}
+.select option[value="padrao"] {
+    color: #feeeff;
 }
 .corpo-form-orcamento label {
     margin: 0 0 5px 5px;
-    color: #1e1e1e;
+    color: #000;
+    font-family: 'IBM Plex Serif', Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
 input[type="text"],
 input[type="email"],
@@ -37,21 +45,48 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.corpo-form-orcamento input:hover {
+    border:1px solid #007bff;
+}
+.corpo-form-orcamento textarea:hover {
+    border:1px solid #007bff;
+}
+.corpo-form-orcamento input:focus {
+    border:1px solid #007bff;
+}
+.corpo-form-orcamento textarea:focus {
+    border:1px solid #007bff;
+}
+.corpo-form-orcamento .nome{
+    grid-column:span 5 ;
+}
+.corpo-form-orcamento .email{
+    grid-column:span 5 ;
+}
 .option[value="descri"]{
     font-size: 20px;
 }
 .corpo-form-orcamento .select{
+    grid-column:span 5;
+}
+.corpo-form-orcamento .tel{
+    grid-column:span 2;
+}
+.corpo-form-orcamento .nacimento{
     grid-column:span 2;
 }
 
 .corpo-form-orcamento .msg{
-    grid-column: span 2;
+    grid-column: span 5;
 }
 
 input[type="submit"]{
     width:100%;
-    grid-column: span 2;
+    grid-column: span 5;
     margin: 0 auto;
+}
+.corpo-form-orcamento .botao-geral{
+    grid-column:2/5;
 }
 
 

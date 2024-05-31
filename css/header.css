@@ -9,9 +9,7 @@
     align-items: center;
 }
 
-/* .logo {
-    width: 250px;
-    background-color: #bb15c4;} */
+
 .logo img{
     width: 60px;
 }
@@ -30,20 +28,19 @@
 .corpo-nav a {
     font-size: 1.1875rem;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    color: #000;
+    font-weight: 700;
+    color: #00a6ff;
     text-transform: capitalize;
 }
 
 .corpo-nav a:hover {
-    color: #001f3f;
+    color: #023a7f;
     font-weight: bold;
     transition: 1s;
 }
 .activo {
-    color: #036ad1 !important;
-    font-weight: bold !important;
-    transition: 1s;
+    border-bottom: 2px solid #00a6ff;
+    color: #00437e;
 }
 
 .nave-zap-orc {
@@ -56,13 +53,13 @@
 .nave-zap-orc i {
     font-size: 35px;
     margin: 5px;
-    color: #014FA3;
+    color: #00a6ff;
 }
 
 .nave-zap-orc i:hover {
     cursor: pointer;
-    transform: scale(1.2);
-    color: #5a98f5;
+    transition: 1s;
+    color: #476ea0;
 }
 
 .nave-zap-orc span {
