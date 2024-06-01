@@ -21,11 +21,7 @@
 
 .corpo-form-orcamento form {
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: repeat(5, 1fr);
-=======
-    grid-template-columns: repeat(4, 1fr);
->>>>>>> main
     gap: 20px;
 }
 .select option[value="padrao"] {
@@ -71,17 +67,13 @@ textarea {
     font-size: 20px;
 }
 .corpo-form-orcamento .nome{
-    grid-column: span 4;
+    grid-column: span 5;
 }
 .corpo-form-orcamento .email{
-    grid-column: span 4;
+    grid-column: span 5;
 }
 .corpo-form-orcamento .select{
-<<<<<<< HEAD
     grid-column:span 5;
-=======
-    grid-column:span 4;
->>>>>>> main
 }
 .corpo-form-orcamento .tel{
     grid-column:span 2;
@@ -91,15 +83,7 @@ textarea {
 }
 
 .corpo-form-orcamento .msg{
-<<<<<<< HEAD
     grid-column: span 5;
-=======
-    grid-column: span 4;
-}
-.corpo-form-orcamento .botao-geral{
-    grid-column: span 2;
-    grid-column: 1 / -1;
->>>>>>> main
 }
 
 input[type="submit"]{
@@ -110,10 +94,6 @@ input[type="submit"]{
 .corpo-form-orcamento .botao-geral{
     grid-column:2/5;
 }
-
-sel
-
-
 
 /* STYLO LOADING */
 
