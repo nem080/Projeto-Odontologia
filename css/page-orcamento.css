@@ -117,21 +117,48 @@ input[type="submit"]{
     display: none;
 }
 
-@media(width <= 429px){
-    .corpo-form-orcamento form {
-        grid-template-columns:1fr;
+@media(max-width:1024px){
+    .bg-header .ocm {
+        margin-bottom: 0px;
+            
     }
-        .corpo-form-orcamento .select {
-            grid-column: span 1;
-        }
-    
-        .corpo-form-orcamento .msg {
-            grid-column: span 1;
-        }
-    
-        input[type="submit"] {
-            width: 100%;
-            grid-column: span 1;
-            margin: 0 auto;
-        }
 }
+
+@media(max-width:415px){
+    .bg-orcamento {
+        padding: 0px;
+        background-color: #eef4ff;
+    }
+    .bg-orcamento .titulo-p {
+        color: #007bff;
+        font-size: 23px;
+        margin:15px;
+    }
+    .corpo-form-orcamento form {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+    .corpo-form-orcamento .tel {
+        width: 70%;
+        grid-column: span 5;
+    }
+
+    .corpo-form-orcamento .nacimento {
+        width: 70%;
+        grid-column: span 5;
+    }
+
+    .corpo-form-orcamento .botao-geral{
+        display: block;
+        text-align: center;
+        grid-column: span 5;
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+
+
+
+

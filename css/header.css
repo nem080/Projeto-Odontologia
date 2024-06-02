@@ -28,7 +28,7 @@
 .corpo-nav a {
     font-size: 1.1875rem;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     color: #00a6ff;
     text-transform: capitalize;
 }
@@ -38,9 +38,9 @@
     font-weight: bold;
     transition: 1s;
 }
-.activo {
-    border-bottom: 2px solid #00a6ff;
-    color: #00437e;
+.marcador-menu a{
+    color: #032e54;
+    font-weight: bold;
 }
 
 .nave-zap-orc {
@@ -103,18 +103,13 @@
 /* responsividade header */
 
 @media(max-width:1025px) {
-    .bg-header .container {
-        margin-bottom: 30px;
-    }
+    
     .corpo-nav a {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 898px) {
-    .bg-header {
-        margin-bottom: 40px
-    }
     .corpo-nav ul {
         display: flex;
         gap: 20px;
@@ -137,18 +132,12 @@
 }
 
 @media (max-width:635px){
-    .bg-header{
-        margin-bottom: 40px
-    }
     .corpo-nav a {
         font-size: 0.8rem;
     }
 }
 
 @media (max-width: 429px) {
-    .bg-header .container {
-        margin-bottom: 20px;
-    }
     .corpo-nav a {
         font-size: 0.7rem;
     }
