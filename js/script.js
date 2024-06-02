@@ -4,7 +4,7 @@ import { initVerMaisBlog } from './module/btn-blog-ver-mais.js';
 import { initFormContato } from './module/formContato.js';
 import { initScrollSuave } from './module/scroll-suave.js';
 import { initSecaoSeletor } from './module/seletor-secao.js';
-import { initLerMaisSobre } from './module/lerMaisSobre.js';
+// import { initLerMaisSobre } from './module/lerMaisSobre.js';
 
 // import { initFormOrcamento } from './module/orcamento-from.js';
 // import { SlideNav } from './module/slide-sobre.js';
@@ -16,7 +16,7 @@ initVerMaisBlog();
 initFormContato();
 initScrollSuave();
 initSecaoSeletor();
-initLerMaisSobre();
+// initLerMaisSobre();
 
 // import SlideNav from './module/slide-sobre.js'; // Importando a classe padrão exportada
 
