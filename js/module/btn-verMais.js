@@ -1,7 +1,13 @@
-
-export function initBtnVerMais(){
+export function initBtnVerMais() {
     const cards = document.querySelectorAll('.card-servico');
     const btnVerMais = document.querySelector('.btn-verMais');
+    console.log(btnVerMais);
+
+    // Verificar se o botão existe no DOM
+    if (!btnVerMais) {
+        console.error('Elemento .btn-verMais não encontrado.');
+        return;
+    }
 
     // Ocultar todos os cards exceto os três primeiros
     cards.forEach((card, index) => {
@@ -23,6 +29,7 @@ export function initBtnVerMais(){
         this.textContent === 'Ver mais' ? this.textContent = 'Ver menos' : this.textContent = 'Ver mais';
     });
 }
+
 
 
 
