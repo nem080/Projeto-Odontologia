@@ -1,7 +1,6 @@
 export function initBtnVerMais() {
     const cards = document.querySelectorAll('.card-servico');
     const btnVerMais = document.querySelector('.btn-verMais');
-    console.log(btnVerMais);
 
     // Verificar se o botão existe no DOM
     if (!btnVerMais) {
