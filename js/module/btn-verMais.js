@@ -1,3 +1,8 @@
+// btn-blog-ver-mais.js
+document.addEventListener('DOMContentLoaded', (event) => {
+    initBtnVerMais();
+});
+
 export function initBtnVerMais() {
     const cards = document.querySelectorAll('.card-servico');
     const btnVerMais = document.querySelector('.btn-verMais');

@@ -1,8 +1,16 @@
 // orcamento-from.js
-export function initFormOrcamento() {
-    // Seu código aqui
-}
+document.addEventListener('DOMContentLoaded', (event) => {
+    initFormOrcamento();
+});
 
+export function initFormOrcamento() {
+    const dados_formulario = document.querySelector('#orcamento-form');
+    if (dados_formulario) {
+        dados_formulario.addEventListener('submit', handleSubmit);
+    } else {
+        console.error('Formulário #orcamento-form não encontrado.');
+    }
+}
 
 // Função para lidar com a submissão do formulário
 function handleSubmit(event) {

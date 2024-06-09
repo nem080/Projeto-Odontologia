@@ -4,10 +4,6 @@ import { initVerMaisBlog } from './module/btn-blog-ver-mais.js';
 import { initFormContato } from './module/formContato.js';
 import { initScrollSuave } from './module/scroll-suave.js';
 import { initSecaoSeletor } from './module/seletor-secao.js';
-// import { initLerMaisSobre } from './module/lerMaisSobre.js';
-
-// import { initFormOrcamento } from './module/orcamento-from.js';
-// import { SlideNav } from './module/slide-sobre.js';
 
 
 initMenuMobile();
@@ -17,9 +13,3 @@ initFormContato();
 initScrollSuave();
 initSecaoSeletor();
 // initLerMaisSobre();
-
-// import SlideNav from './module/slide-sobre.js'; // Importando a classe padrão exportada
-
-// const slide = new SlideNav('.slide', '.slide-wrapper');
-// slide.init();
-// slide.addControl('.custom-controls');
