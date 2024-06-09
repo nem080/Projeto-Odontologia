@@ -1,9 +1,5 @@
 .bg-contato {
-<<<<<<< HEAD
-    background: #eef4ff;
-=======
     background: #FBFBFB;
->>>>>>> main
     padding: 20px;
     position: relative;
 }
@@ -273,6 +269,12 @@ textarea{
      flex-wrap: nowrap;
      justify-content:center;
      margin:0 auto;
+ }
+ .corpo-contato .titulo-pequeno{
+    text-align:center;
+ }
+ .paragrafo{
+    font-size:17px;
  }
 }
 @media (max-width:376px){

@@ -52,6 +52,10 @@
 
 
 .text-descr-blog .botao-geral{
+    font-size: 13px;
+    font-weight: lighter;
+    background-color: #fff;
+    color: #007bff;
     display: none;
 }
 
