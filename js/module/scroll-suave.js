@@ -1,4 +1,5 @@
-export function initScrollSuave(){
+// Scroll Suave
+export function initScrollSuave() {
     document.addEventListener("DOMContentLoaded", function () {
         const links = document.querySelectorAll('a[href^="#"]');
         for (const link of links) {
@@ -16,6 +17,17 @@ export function initScrollSuave(){
             });
         }
     });
-    
 }
 
+// Seletor de Seção
+export function initSecaoSeletor() {
+    window.scrollToSection = function (sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+}
