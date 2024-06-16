@@ -1,3 +1,5 @@
+
+// Formulário de Contato
 export function initFormContato() {
     const corpoForm = document.querySelector('#form-contato');
     const btnEnviar = document.querySelector('#btn-from-contato'); // Selecionar o elemento do botão, não o valor
