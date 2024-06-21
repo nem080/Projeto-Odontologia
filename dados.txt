@@ -1,6 +1,0 @@
-/* cicerafs.odonto@gmail.com */
-/* Odonto.cicera.fatima43576757 */
-
-
-
-API formulario = https://script.google.com/macros/AKfycbwdxf8kU4hebXAp8jkY02PF7ypYHk2vaPKV2mg6kMvHej73coB-awf8XVPPXOKSAH5a-gexec
