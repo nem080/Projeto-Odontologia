@@ -1,81 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria de Imagens</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
-
-    header {
-      background: #0a3d62;
-      padding: 15px;
-      color: white;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card p {
-      padding: 10px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .voltar {
-      display: block;
-      margin: 30px auto;
-      text-align: center;
-    }
-
-    .voltar a {
-      text-decoration: none;
-      background: #0a3d62;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-    }
-
-  </style>
-
+    <meta charset="UTF-8">
+    <meta name="language" content="Português">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nome do autor">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/86950c299c.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="mainCss.css">
+    <link rel="icon" href="../img/faicon-nova.png" width="20" type="image/svg+xml">
 </head>
 <body>
 
@@ -86,35 +28,109 @@
   <div class="container">
     <h1>Um pouco do meu dia a dia</h1>
 
-    <div class="galeria">
+    <button class="btn-carousel prev" onclick="moveSlide(-1)">❮</button>
+    
+    <div class="carousel-container">
+      <div class="galeria" id="track">
+        <div class="card" onclick="openModal(0)">
+          <img src="./img/consultorioAtendimentos/Code_Generated_Image (1).jpg" alt="Implante">
+          <p>Implantes</p>
+        </div>
 
-      <div class="card">
-        <img src="img/servicos-img/implante.jpeg" alt="Implante">
-        <p>Implantes</p>
-      </div>
+        <div class="card" onclick="openModal(1)">
+          <img src="img/consultorioAtendimentos/Code_Generated_Image (1.2).jpg" alt="Clareamento">
+          <p>Clareamento</p>
+        </div>
 
-      <div class="card">
-        <img src="img/servicos-img/clareamento.jpeg" alt="Clareamento">
-        <p>Clareamento</p>
-      </div>
+        <div class="card" onclick="openModal(2)">
+          <img src="img/consultorioAtendimentos/Code_Generated_Image (1.3).jpg" alt="Lentes">
+          <p>Lentes de contato</p>
+        </div>
 
-      <div class="card">
-        <img src="img/servicos-img/lente.jpeg" alt="Lentes">
-        <p>Lentes de contato</p>
-      </div>
+        <div class="card" onclick="openModal(3)">
+          <img src="img/consultorioAtendimentos/Code_Generated_Image (1.4).jpg" alt="Ortodontia">
+          <p>Ortodontia</p>
+        </div>
+        
+        <div class="card" onclick="openModal(4)">
+          <img src="img/consultorioAtendimentos/Code_Generated_Image (1.5).jpg" alt="Ortodontia">
+          <p>Ortodontia</p>
+        </div>
 
-      <div class="card">
-        <img src="img/servicos-img/ortodontia.jpeg" alt="Ortodontia">
-        <p>Ortodontia</p>
-      </div>
-
+        </div>
     </div>
+
+    <button class="btn-carousel next" onclick="moveSlide(1)">❯</button>
 
     <div class="voltar">
       <a href="index.html">⬅ Voltar ao site</a>
     </div>
-
   </div>
 
+  <div id="myModal" class="modal">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    
+    <div class="modal-nav">
+      <button onclick="changeModalImg(-1)">❮</button>
+      <button onclick="changeModalImg(1)">❯</button>
+    </div>
+
+    <img class="modal-content" id="imgExpanded">
+    <div id="caption" class="modal-caption"></div>
+  </div>
+  <footer>
+        <div class="bg-footer">
+            <div class="log-img">
+                <a href="index.html">
+                    <img src="../img/logo-escrita-Preta.png" width="80" alt="logo">
+                </a>
+            </div>
+            <div class="footer-corpo space-bottom">
+                <div class="footer-info">
+                    <h3 class="titulo-pequeno">Informações de Contato</h3>
+                    <p class="paragrafo"><i class="fas fa-phone"></i> <strong>Telefone:</strong> <a
+                            href="tel:+55123456789">+55 (11) 9 8114-0012</a></p>
+                    <p class="paragrafo"><i class="fas fa-envelope"></i> <strong>Email:</strong><a
+                            href="mailto:cicerafs@uol.com.br?subject=Mais informações&body=Olá"> cicerafs@uol.com.br</a>
+                    </p>
+                    <p class="paragrafo"><i class="fas fa-id-card"></i> <strong>CRO:</strong> 131920</p>
+                    <a href="https://www.google.com.br/maps/place/R.+Silva+Jardim,+187+-+Centro,+S%C3%A3o+Bernardo+do+Campo+-+SP,+09715-090/@-23.7140009,-46.5497312,16.76z/data=!4m6!3m5!1s0x94ce4185cc0b07a7:0x3520ed67d87765c8!8m2!3d-23.7140045!4d-46.5473084!16s%2Fg%2F11g8bg7d89?entry=ttu"
+                        target="_blank">
+                        <p class="paragrafo"><i class="fas fa-map-marker local"></i> <strong> Endereço:</strong> R. Silva
+                            Jardim, 187 <br>Centro, São Bernardo do Campo - SP, 09715-090</p><span class="cortext">Ver
+                            no mapa</span>
+                    </a>
+                </div>
+
+                <div class="footer-redes-sociais container">
+                    <h3 class="titulo-pequeno">Redes Sociais</h3>
+                    <ul class="redes-sociais-lista">
+                        <li><a href="https://www.instagram.com/dra.cicera_f_santoss?igsh=NnhhcDN0b3cxbmVq"
+                                target="_blank"><i class="fa-brands fa-square-instagram"></i>instagram</a></li>
+                        <li><a href="https://m.facebook.com/cicera.fatimadossantos.3?locale=pt_BR" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</li>
+                        <li><a href="https://www.linkedin.com/in/cicera-f%C3%A1tima-dos-santos-baa707191/?trk=public_profile_browsemap_profile-result-card_result-card_full-click&originalSubdomain=br"
+                                target="_blank"><i class="fab fa-linkedin"></i>LinkDin</a></li>
+                        <li><a href="https://wa.me/5511981140012?text=Olá vim atrasvez do site, queria mais informação do atendimento."
+                                target="_blank"><i class="fa-brands fa-square-whatsapp"></i>Whatsapp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav space-bottom">
+                    <h3 class="titulo-pequeno">Navegação</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servico">Serviço</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="autorais">
+                © 2024. <a href="https://www.instagram.com/create_codeweb/?igsh=dzI0ZHcyNWZueW1u&utm_source=qr">Create
+                    Code Web</a>. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+ <script type="module" src="main.js"></script>
 </body>
 </html>

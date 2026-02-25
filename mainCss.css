@@ -1,11 +1,12 @@
 .bg-header {
-    background-color: #fff
+    background-color: #fff;
+    
 }
 
 .header-corpo {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
 }
 
 .logo img {
@@ -17,7 +18,7 @@
     gap: 30px;
     justify-content: center;
     max-width: 600px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .corpo-nav a {
@@ -384,7 +385,8 @@
 
     .text-descr-blog .paragrafo:first-child {
         margin: 0 0 10px;
-        text-align: justify
+        text-align: justify:
+        padding: 0 5px:
     }
 }
 
@@ -1126,7 +1128,7 @@ p {
 
     .text-descr-blog .paragrafo:first-child {
         margin: 0;
-        text-align: justify
+        text-align: justify:
     }
 
     .text-descr-blog .paragrafo {
@@ -1481,7 +1483,8 @@ textarea {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-evenly;
-    align-items: center
+    align-items: center;
+    margin: 0px 90px;
 }
 
 .footer-corpo .titulo-pequeno {
@@ -1814,3 +1817,174 @@ img {
         margin: 5px 0 0
     }
 }
+
+
+/* Style da tela de imagens */
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #0a3d62;
+      padding: 15px;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      position: relative;
+      padding: 10px 0 0 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Estrutura do Carrossel */
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .galeria {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .card {
+      min-width: calc(33.333% - 14px);
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+      cursor: pointer; /* Indica que é clicável */
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .card:hover img {
+      opacity: 0.8;
+    }
+
+    .card p {
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    /* Botões do Carrossel */
+    .btn-carousel {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(10, 61, 98, 0.8);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      z-index: 10;
+    }
+
+    .prev { left: -10px; }
+    .next { right: -10px; }
+
+    /* --- ESTILO DO MODAL (IMAGEM EXPANDIDA) --- */
+    .modal {
+      display: none; /* Escondido por padrão */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .modal-content {
+      max-width: 80%;
+      max-height: 80%;
+      border: 3px solid white;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+
+    .modal-caption {
+      color: white;
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .modal-nav {
+      position: absolute;
+      top: 50%;
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none; /* Permite clicar no que está atrás se necessário */
+    }
+
+    .modal-nav button {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: none;
+      font-size: 40px;
+      padding: 10px 20px;
+      cursor: pointer;
+      pointer-events: auto;
+      border-radius: 5px;
+    }
+
+    .modal-nav button:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .voltar {
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .voltar a {
+      text-decoration: none;
+      background: #0a3d62;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 900px) { .card { min-width: calc(50% - 10px); } }
+    @media (max-width: 600px) { .card { min-width: 100%; } }

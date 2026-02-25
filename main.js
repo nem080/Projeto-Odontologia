@@ -1,152 +1,200 @@
 (() => {
-  "use strict"; // Ativa modo estrito para evitar erros silenciosos
+    "use strict";
 
-  // Função para controlar os cards de serviço e botão "Ver mais"
-  function e() {
-    const e = document.querySelectorAll(".card-servico"), // Seleciona todos os cards
-      t = document.querySelector(".btn-verMais"); // Seleciona o botão "Ver mais"
-    t
-      ? (e.forEach((e, t) => {
-          t >= 3 && (e.style.display = "none"); // Esconde todos os cards a partir do 4º
-        }),
-        t.addEventListener("click", function () {
-          // Ao clicar no botão
-          (e.forEach((e, t) => {
-            t >= 3 && (e.style.display = "block"); // Mostra os cards escondidos
-          }),
-            "Ver mais" === this.textContent
-              ? (this.textContent = "Ver menos") // Alterna texto do botão
-              : (this.textContent = "Ver mais"));
-        }))
-      : console.error("Elemento .btn-verMais não encontrado."); // Caso não exista o botão
-  }
+    // --- 1. CONTROLE DOS CARDS DE SERVIÇO (VER MAIS / VER MENOS) ---
+    function initServiceCards() {
+        const cards = document.querySelectorAll(".card-servico");
+        const btn = document.querySelector(".btn-verMais");
 
+        if (!btn) return;
 
+        // Esconde cards iniciais (acima de 3)
+        cards.forEach((card, index) => {
+            if (index >= 3) card.style.display = "none";
+        });
 
-  // Executa a função quando o DOM estiver carregado
-  document.addEventListener("DOMContentLoaded", (t) => {
-    e();
-  });
+        btn.addEventListener("click", function () {
+            const estaFechado = this.textContent === "Ver mais";
 
-  // Controle do menu mobile (hambúrguer)
-  document
-    .querySelector(".menu-toggle")
-    .addEventListener("click", function () {
-      document.querySelector(".menu-mobile").classList.toggle("active"); // Abre/fecha menu
-    });
-
-  // Fecha menu ao clicar fora dele
-  document.addEventListener("click", function (e) {
-    const t = document.querySelector(".menu-mobile");
-    document.querySelector(".menu-toggle").contains(e.target) ||
-      t.contains(e.target) ||
-      t.classList.remove("active");
-  });
-
-  // Fecha menu ao clicar em um link dentro dele
-  document.querySelectorAll(".menu-mobile ul li a").forEach(function (e) {
-    e.addEventListener("click", function () {
-      document.querySelector(".menu-mobile").classList.remove("active");
-    });
-  });
-
-  e(); // Executa novamente a função dos cards
-
-  // Botão "Continuar a ler..." no blog
-  (function () {
-    const e = document.querySelector(".ocultar"), // Conteúdo escondido
-      t = document.querySelector("#btn-blog"); // Botão
-    t.addEventListener("click", function () {
-      e.classList.toggle("ativo"); // Alterna classe ativo
-      e.classList.contains("ativo")
-        ? ((e.style.display = "block"), (t.textContent = "Ler menos"))
-        : ((e.style.display = "none"),
-          (t.textContent = "Continuar a ler..."));
-    });
-  })();
-
-  // Formulário de contato
-  (function () {
-    const e = document.querySelector("#form-contato"),
-      t = document.querySelector("#btn-from-contato"),
-      o = document.querySelector(".resposta-from"),
-      n = document.querySelector(".corpo-contato");
-
-    e.addEventListener("submit", function (e) {
-      e.preventDefault(); // Impede envio padrão
-      t.innerHTML = '<img src="../img/loadAzul.png">'; // Mostra ícone de carregamento
-
-      // Captura valores dos campos
-      const c = document.querySelector('input[name="nome"]').value,
-        r = document.querySelector('input[name="email"]').value,
-        a = document.querySelector('input[name="telefone"]').value,
-        i = document.querySelector('textarea[name="mensagem"]').value;
-
-      // Gera data/hora atual formatada
-      var l = new Date();
-      const u = `${String(l.getDate()).padStart(2, "0")}/${String(
-        l.getMonth() + 1
-      ).padStart(2, "0")}/${l.getFullYear()} ${String(l.getHours()).padStart(
-        2,
-        "0"
-      )}:${String(l.getMinutes()).padStart(2, "0")}:${String(
-        l.getSeconds()
-      ).padStart(2, "0")}`;
-
-      // Envia dados para API SheetMonkey
-      fetch("https://api.sheetmonkey.io/form/dgvF4tuQp9hY8aqiujk4hi", {
-        method: "POST",
-        headers: {
-          accept: "application/json",
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          NOME: c,
-          EMAIL: r,
-          MENSAGEM: i,
-          TELEFONE: a,
-          DATA_HS: u,
-        }),
-      }).then(() => {
-        // Ao concluir envio
-        o.innerHTML = "Dados Enviados Com Sucesso, Logo Retornaremos";
-        o.style.display = "block";
-        n.classList.add("opacit"); // Aplica efeito visual
-        setTimeout(function () {
-          o.remove(); // Remove mensagem após 7s
-        }, 7000);
-        t.innerHTML = "Enviar"; // Restaura botão
-        // Limpa campos
-        document.querySelector('input[name="nome"]').value = "";
-        document.querySelector('input[name="email"]').value = "";
-        document.querySelector('input[name="telefone"]').value = "";
-        document.querySelector('textarea[name="mensagem"]').value = "";
-        // Recarrega página após 3s
-        setTimeout(function () {
-          location.reload();
-        }, 3000);
-      });
-
-      console.log(c, r, a, i, u); // Log dos dados
-    });
-  })();
-
-  // Scroll suave para links de âncora
-  document.addEventListener("DOMContentLoaded", function () {
-    const e = document.querySelectorAll('a[href^="#"]');
-    for (const o of e) o.addEventListener("click", t);
-
-    function t(e) {
-      e.preventDefault();
-      const t = this.getAttribute("href"),
-        o = document.querySelector(t).offsetTop;
-      scroll({ top: o, behavior: "smooth" }); // Scroll suave
+            if (estaFechado) {
+                // Expandir
+                cards.forEach((card, index) => {
+                    if (index >= 3) card.style.display = "block";
+                });
+                this.textContent = "Ver menos";
+            } else {
+                // Recolher
+                cards.forEach((card, index) => {
+                    if (index >= 3) card.style.display = "none";
+                });
+                this.textContent = "Ver mais";
+                // Opcional: faz scroll de volta para o topo da seção ao fechar
+                document.getElementById('servico').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     }
-  });
 
-  // Função global para scroll até seção específica
-  window.scrollToSection = function (e) {
-    const t = document.getElementById(e);
-    t && window.scrollTo({ top: t.offsetTop, behavior: "smooth" });
-  };
+    // --- 2. MENU MOBILE ---
+    function initMenuMobile() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menuMobile = document.querySelector(".menu-mobile");
+
+        if (!menuToggle || !menuMobile) return;
+
+        menuToggle.addEventListener("click", () => {
+            menuMobile.classList.toggle("active");
+        });
+
+        // Fecha ao clicar fora
+        document.addEventListener("click", (e) => {
+            if (!menuToggle.contains(e.target) && !menuMobile.contains(e.target)) {
+                menuMobile.classList.remove("active");
+            }
+        });
+
+        // Fecha ao clicar em link
+        document.querySelectorAll(".menu-mobile ul li a").forEach(link => {
+            link.addEventListener("click", () => {
+                menuMobile.classList.remove("active");
+            });
+        });
+    }
+
+    // --- 3. BLOG (CONTINUAR LENDO) ---
+    function initBlogReadMore() {
+        const conteudoOculto = document.querySelector(".ocultar");
+        const btnBlog = document.querySelector("#btn-blog");
+
+        if (!btnBlog || !conteudoOculto) return;
+
+        btnBlog.addEventListener("click", () => {
+            const ativo = conteudoOculto.classList.toggle("ativo");
+            if (ativo) {
+                conteudoOculto.style.display = "block";
+                btnBlog.textContent = "Ler menos";
+            } else {
+                conteudoOculto.style.display = "none";
+                btnBlog.textContent = "Continuar a ler...";
+            }
+        });
+    }
+
+    // --- 4. FORMULÁRIO ---
+    function initForm() {
+        const form = document.querySelector("#form-contato");
+        if (!form) return;
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const btn = document.querySelector("#btn-from-contato");
+            const resposta = document.querySelector(".resposta-from");
+            
+            btn.innerHTML = 'Enviando...';
+
+            const dados = {
+                NOME: form.querySelector('[name="nome"]').value,
+                EMAIL: form.querySelector('[name="email"]').value,
+                TELEFONE: form.querySelector('[name="telefone"]').value,
+                MENSAGEM: form.querySelector('[name="mensagem"]').value,
+                DATA_HS: new Date().toLocaleString()
+            };
+
+            fetch("https://api.sheetmonkey.io/form/dgvF4tuQp9hY8aqiujk4hi", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(dados),
+            }).then(() => {
+                resposta.innerHTML = "Dados Enviados Com Sucesso!";
+                resposta.style.display = "block";
+                form.reset();
+                btn.innerHTML = "Enviar";
+                setTimeout(() => location.reload(), 3000);
+            });
+        });
+    }
+
+    // --- INICIALIZAÇÃO GERAL ---
+    document.addEventListener("DOMContentLoaded", () => {
+        initServiceCards();
+        initMenuMobile();
+        initBlogReadMore();
+        initForm();
+        
+        // Scroll Suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
+            });
+        });
+    });
+
 })();
+
+// --- 5. SEÇÃO DE IMAGENS E MODAL ---
+const track = document.getElementById('track');
+const modal = document.getElementById("myModal");
+const modalImg = document.getElementById("imgExpanded");
+const captionText = document.getElementById("caption");
+
+let currentIndex = 0;
+let currentModalIndex = 0;
+
+// Tornar as funções globais para o HTML acessar (necessário para type="module")
+window.openModal = function(index) {
+    const images = document.querySelectorAll('.card img');
+    if (!images[index]) return;
+    
+    modal.style.display = "flex";
+    currentModalIndex = index;
+    modalImg.src = images[index].src;
+    captionText.innerHTML = images[index].alt;
+};
+
+window.closeModal = function() {
+    modal.style.display = "none";
+};
+
+window.changeModalImg = function(direction) {
+    const images = document.querySelectorAll('.card img');
+    currentModalIndex += direction;
+    
+    if (currentModalIndex >= images.length) currentModalIndex = 0;
+    if (currentModalIndex < 0) currentModalIndex = images.length - 1;
+    
+    modalImg.src = images[currentModalIndex].src;
+    captionText.innerHTML = images[currentModalIndex].alt;
+};
+
+window.moveSlide = function(direction) {
+    const cards = document.querySelectorAll('.card');
+    if (cards.length === 0) return;
+
+    const cardWidth = cards[0].offsetWidth + 20; // largura + gap
+    const visibleCards = Math.floor(track.parentElement.offsetWidth / cardWidth);
+    const maxIndex = cards.length - visibleCards;
+
+    currentIndex += direction;
+
+    // Lógica para não ultrapassar os limites
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+    const currentPosition = currentIndex * cardWidth;
+    track.style.transform = `translateX(-${currentPosition}px)`;
+};
+
+// Fechar ao clicar fora da imagem
+window.addEventListener('click', (event) => {
+    if (event.target == modal) window.closeModal();
+});
+
+// Atalhos de teclado
+document.addEventListener('keydown', (e) => {
+    if (modal.style.display === "flex") {
+        if (e.key === "Escape") window.closeModal();
+        if (e.key === "ArrowLeft") window.changeModalImg(-1);
+        if (e.key === "ArrowRight") window.changeModalImg(1);
+    }
+});
