@@ -80,38 +80,59 @@
     }
 
     // --- 4. FORMULÁRIO ---
-    function initForm() {
-        const form = document.querySelector("#form-contato");
-        if (!form) return;
+// --- 4. FORMULÁRIO (CONEXÃO DIRETA COM GOOGLE SHEETS) ---
+function initForm() {
+    const form = document.querySelector("#form-contato");
+    const btn = document.querySelector("#btn-from-contato");
+    const resposta = document.querySelector(".resposta-from");
 
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            const btn = document.querySelector("#btn-from-contato");
-            const resposta = document.querySelector(".resposta-from");
+    if (!form || !btn) return;
+
+    // Substitua pela URL que o Google Apps Script te deu (ou mantenha a do SheetMonkey)
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxuDMNG5lnmGLCDHo0pIM8V2G44ZqGBltAgk5L1tqgbhErpLpEaaKpcdI8G-SkvJP9J/exec"; 
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+        // Feedback visual imediato
+        btn.disabled = true;
+        btn.innerHTML = 'Enviando...';
+
+        // FormData pega automaticamente os campos baseados no atributo 'name' do HTML
+        const formData = new FormData(form);
+
+        fetch(scriptURL, { 
+            method: "POST", 
+            body: formData 
+        })
+        .then(response => {
+            // Sucesso
+            resposta.innerHTML = "Agendamento solicitado! Entraremos em contato.";
+            resposta.style.display = "block";
+            resposta.style.color = "#023a7f"; // Cor do seu consultório
             
-            btn.innerHTML = 'Enviando...';
+            form.reset();
+            btn.innerHTML = "Enviar";
+            btn.disabled = false;
 
-            const dados = {
-                NOME: form.querySelector('[name="nome"]').value,
-                EMAIL: form.querySelector('[name="email"]').value,
-                TELEFONE: form.querySelector('[name="telefone"]').value,
-                MENSAGEM: form.querySelector('[name="mensagem"]').value,
-                DATA_HS: new Date().toLocaleString()
-            };
-
-            fetch("https://api.sheetmonkey.io/form/dgvF4tuQp9hY8aqiujk4hi", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(dados),
-            }).then(() => {
-                resposta.innerHTML = "Dados Enviados Com Sucesso!";
-                resposta.style.display = "block";
-                form.reset();
-                btn.innerHTML = "Enviar";
-                setTimeout(() => location.reload(), 3000);
-            });
+            // Recarrega após 3 segundos como você já fazia
+            setTimeout(() => {
+                resposta.style.display = "none";
+                // location.reload(); // Opcional: recarregar a página
+            }, 3000);
+        })
+        .catch(error => {
+            // Erro
+            console.error('Erro ao enviar!', error.message);
+            resposta.innerHTML = "Erro ao enviar. Tente novamente ou ligue-nos.";
+            resposta.style.color = "red";
+            resposta.style.display = "block";
+            btn.disabled = false;
+            btn.innerHTML = "Tentar novamente";
         });
-    }
+    });
+}
+// fim envio contato
 
     // --- INICIALIZAÇÃO GERAL ---
     document.addEventListener("DOMContentLoaded", () => {

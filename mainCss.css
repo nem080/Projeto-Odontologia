@@ -9,8 +9,28 @@
     align-items: center;
 }
 
-.logo img {
-    width: 60px
+.logo {
+    display: flex;
+    align-items: center;
+    /* padding: 40px 60px 20px; */
+}
+
+.logo a img {
+    max-width: 150px;  /* tamanho ideal da logo */
+    height: auto;
+    object-fit: contain;
+}
+
+.log-img {
+    display: flex;
+    align-items: center;
+    padding: 40px 60px 30px;
+}
+
+.log-img img {
+    max-width: 150px;  /* tamanho ideal da logo */
+    height: auto;
+    object-fit: contain;
 }
 
 .corpo-nav ul {
@@ -22,11 +42,16 @@
 }
 
 .corpo-nav a {
-    font-size: 1.4875rem;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: 800;
-    color: #023a7f;
-    text-transform: capitalize
+    /* font-size: 1.4875rem; */
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.30rem; /* Um pouco menor para elegância */
+    font-weight: 600;    /* Firme, mas não grosseiro */
+    color: #023a7f;      /* O azul excelente que você escolheu */
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 0.01em; /* Um leve respiro entre as letras */
+    transition: all 0.3s ease;
+    padding: 10px 15px;
 }
 
 .corpo-nav a:hover {
@@ -1829,17 +1854,17 @@ img {
 
     header {
       background: #0a3d62;
-      padding: 15px;
+      padding: 1px;
       color: white;
       text-align: center;
     }
 
     .container {
       max-width: 1200px;
-      margin: 40px auto;
+      margin: 5px auto;
       padding: 0 20px;
       position: relative;
-      padding: 10px 0 0 0;
+      padding: 5px 0 0 0;
     }
 
     h1 {
