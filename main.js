@@ -89,7 +89,7 @@ function initForm() {
     if (!form || !btn) return;
 
     // Substitua pela URL que o Google Apps Script te deu (ou mantenha a do SheetMonkey)
-    const scriptURL = "https://docs.google.com/spreadsheets/d/1kouEjiisXNy0iFjVW4FFItCMt0hGajKq7fmggFQfu00/edit?gid=0#gid=0"; 
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxuDMNG5lnmGLCDHo0pIM8V2G44ZqGBltAgk5L1tqgbhErpLpEaaKpcdI8G-SkvJP9J/exec"; 
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -132,6 +132,7 @@ function initForm() {
         });
     });
 }
+// fim envio contato
 
     // --- INICIALIZAÇÃO GERAL ---
     document.addEventListener("DOMContentLoaded", () => {
