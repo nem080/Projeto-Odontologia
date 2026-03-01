@@ -36,29 +36,43 @@
 
     // --- 2. MENU MOBILE ---
     function initMenuMobile() {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const menuMobile = document.querySelector(".menu-mobile");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menuIcon = document.querySelector(".menu-toggle i.fa-bars"); // O ícone hambúrguer
+    const menuMobile = document.querySelector(".menu-mobile");
+    const naveZap = document.querySelector(".nave-zap-orc"); // O container do WhatsApp
 
-        if (!menuToggle || !menuMobile) return;
+    if (!menuIcon || !menuMobile) return;
 
-        menuToggle.addEventListener("click", () => {
-            menuMobile.classList.toggle("active");
-        });
+    // ABERTURA: Agora o clique é APENAS no ícone, não na div pai
+    menuIcon.addEventListener("click", (e) => {
+        e.stopPropagation(); // Impede que o clique "suba" para a barra
+        menuMobile.classList.toggle("active");
+    });
 
-        // Fecha ao clicar fora
-        document.addEventListener("click", (e) => {
-            if (!menuToggle.contains(e.target) && !menuMobile.contains(e.target)) {
-                menuMobile.classList.remove("active");
-            }
-        });
-
-        // Fecha ao clicar em link
-        document.querySelectorAll(".menu-mobile ul li a").forEach(link => {
-            link.addEventListener("click", () => {
-                menuMobile.classList.remove("active");
-            });
+    // PROTEÇÃO: Impede que cliques no WhatsApp/Orçamento abram o menu
+    if (naveZap) {
+        naveZap.addEventListener("click", (e) => {
+            e.stopPropagation(); // O clique para aqui e não ativa o menu
         });
     }
+
+    // FECHAMENTO: Clicar fora do menu ou do ícone fecha o menu
+    document.addEventListener("click", (e) => {
+        const isClickInsideMenu = menuMobile.contains(e.target);
+        const isClickOnIcon = menuIcon.contains(e.target);
+
+        if (!isClickInsideMenu && !isClickOnIcon) {
+            menuMobile.classList.remove("active");
+        }
+    });
+
+    // FECHAMENTO: Ao clicar em um link interno
+    document.querySelectorAll(".menu-mobile a").forEach(link => {
+        link.addEventListener("click", () => {
+            menuMobile.classList.remove("active");
+        });
+    });
+}
 
     // --- 3. BLOG (CONTINUAR LENDO) ---
     function initBlogReadMore() {
